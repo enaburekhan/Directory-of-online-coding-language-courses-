@@ -25,6 +25,7 @@ html, body {
 
 
 
+
 $primaryColor: #D35649;
 $direction: column;
 $between: space-between;
@@ -36,6 +37,11 @@ $font-weight: 900;
 $textCenter: center;
 $width-95: 95%;
 $flexstart: flex-start;
+$flex: flex;
+$colorblack: #111;
+$colorgray: #7d8486;
+$font-weight-700: 700;
+$padding: 5px;
 
 
     header {
@@ -138,5 +144,90 @@ $flexstart: flex-start;
             padding: 5px 3px;
         }
 
+        .four-steps-container h5 {
+            height: 40px;
+            text-align: $textCenter;
+            margin-top: 20px;
+            color: $primaryColor;
+        }
+
+        .four-steps {
+            /*border: 1px solid red;*/
+            height: 450px;
+            font-size: 13px;
+           
+        }
+
+        .four-steps-nested {
+            /*border: 1px solid purple;*/
+            height: 110px;
+            min-width: 150px;
+            @include flexCenter();
+            flex-direction: $direction;
+            padding: 0 7px 0 5px;
+            color: $colorgray;
+            font-weight: $font-weight-700;
+            
+        }
+
+        .four-steps-nested a {
+            color: $colorblack;   
+        }
+
+        .locate-p {
+            color: $colorblack;
+            font-weight: $font-weight;
+        }   
+    }
+
+    footer {
+        height: 500px;
        
+        
+        ul {
+            list-style-type: none;
+        }
+
+        .footer-top {
+            position: relative;
+            font-size: 5px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 0.1px solid rgb(143, 133, 133);
+            border-bottom: 0.1px solid rgb(143, 133, 133);
+            color: $colorWhite;
+            width: 50px;
+            padding: 5px 0;
+            width: 100%;
+        }
+
+        .footer-top-icon {
+            color: $colorWhite;
+            position: absolute;
+            left: 177px;
+            bottom: -215px;
+            border: 1px solid rgb(143, 133, 133);
+            border-radius: 50%;
+            background-color: $colorblack;
+            padding: 2px 1px 1px 1px;
+            z-index: 5;  
+        }
+
+        .footer-top-wrapper {
+            height: 150px;
+            background-color: #000;
+            padding: 0 20px;
+        }
+
+        .footer-top-container {
+            height: 50px;
+            /*border: 1px solid red;*/
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        
+
+
     }

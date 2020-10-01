@@ -173,4 +173,104 @@ main .how-it-works {
   text-shadow: none;
   padding: 5px 3px;
 }
+
+main .four-steps-container h5 {
+  height: 40px;
+  text-align: center;
+  margin-top: 20px;
+  color: #D35649;
+}
+
+main .four-steps {
+  /*border: 1px solid red;*/
+  height: 450px;
+  font-size: 13px;
+}
+
+main .four-steps-nested {
+  /*border: 1px solid purple;*/
+  height: 110px;
+  min-width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 7px 0 5px;
+  color: #7d8486;
+  font-weight: 700;
+}
+
+main .four-steps-nested a {
+  color: #111;
+}
+
+main .locate-p {
+  color: #111;
+  font-weight: 900;
+}
+
+footer {
+  height: 500px;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer .footer-top {
+  position: relative;
+  font-size: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 0.1px solid #8f8585;
+  border-bottom: 0.1px solid #8f8585;
+  color: #fff;
+  width: 50px;
+  padding: 5px 0;
+  width: 100%;
+}
+
+footer .footer-top-icon {
+  color: #fff;
+  position: absolute;
+  left: 177px;
+  bottom: -215px;
+  border: 1px solid #8f8585;
+  border-radius: 50%;
+  background-color: #111;
+  padding: 2px 1px 1px 1px;
+  z-index: 5;
+}
+
+footer .footer-top-wrapper {
+  height: 150px;
+  background-color: #000;
+  padding: 0 20px;
+}
+
+footer .footer-top-container {
+  height: 50px;
+  /*border: 1px solid red;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=style.css.map */

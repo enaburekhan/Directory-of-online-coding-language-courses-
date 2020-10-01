@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "acumin-pro","Acumin Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@mixin flexeven {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+
+
+$primaryColor: #D35649;
+$direction: column;
+$between: space-between;
+$colorWhite: #fff;
+$formColor: #C5C2C2;
+$border: 5px;
+$border-3: 3px;
+$font-weight: 900;
+$textCenter: center;
+$width-95: 95%;
+$flexstart: flex-start;
+
+
+    header {
+      .topnav {
+        @include flexCenter();  
+         width: 100%;  
+         height: 80px;
+         background-color: $primaryColor;
+         flex-direction: $direction;
+        }
+      .echantill {
+          @include flexCenter();
+          min-width: 33%;
+          color: $colorWhite;
+          font-weight: 700;
+      }
+      
+      .echantill-icons {
+        @include flexCenter(); 
+        width: 50%;
+      }
+
+      .echantill-icons a {
+        color: $colorWhite;
+      }
+         
+    }
+
+    main {
+         .echantill-edu-container {
+            @include flexCenter();
+         }
+        
+        .echantill-edu {
+            /*border: 1px solid #fff;*/
+            @include flexCenter(); 
+            position: absolute;
+            width: $width-95;
+            height: 230px;
+            top: 240px;
+            flex-direction: $direction;
+            border-radius: $border;
+            text-shadow: 2px 2px 5px #111;
+        }
+        .echantill-text {
+            font-weight: $font-weight;
+            color: $colorWhite;
+            text-align: $textCenter;
+            width: $width-95;
+        }
+
+        .form-key {
+            background-color: $formColor;
+            width: $width-95;
+            /*border: 1px solid purple;*/
+            height: 100px;
+            @include flexeven();
+            border-radius: $border;
+            
+        }
+
+        .bg-img {
+            width: 100%;
+            height: 400px;
+        }
+
+        .form-input {
+            width: 320px;
+            height: 25px;
+            background-color: $colorWhite;
+            border: 1px solid $formColor;
+            margin-left: 7px;
+            border-radius: $border-3;
+            
+        }
+
+        .primarycolor {
+            background-color: $primaryColor;
+            text-align: $textCenter;
+            
+            
+        }
+        ::placeholder {
+            color: $colorWhite;
+            opacity: 1;
+        }
+
+        .key-word {
+            margin-left: 7px;
+            font-family:  sans-serif Helvetica;
+            font-size: 13px;
+            text-shadow: none;
+        }
+
+        .how-it-works {
+            /*border: 1px solid red;*/
+            background-color: $formColor;
+            width: 100px;
+            text-shadow: none;
+            padding: 5px 3px;
+        }
+
+       
+    }

@@ -1,0 +1,176 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  font-family: "acumin-pro","Acumin Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+header .topnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: #D35649;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .echantill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 33%;
+  color: #fff;
+  font-weight: 700;
+}
+
+header .echantill-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+header .echantill-icons a {
+  color: #fff;
+}
+
+main .echantill-edu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .echantill-edu {
+  /*border: 1px solid #fff;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 95%;
+  height: 230px;
+  top: 240px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  text-shadow: 2px 2px 5px #111;
+}
+
+main .echantill-text {
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  width: 95%;
+}
+
+main .form-key {
+  background-color: #C5C2C2;
+  width: 95%;
+  /*border: 1px solid purple;*/
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+}
+
+main .bg-img {
+  width: 100%;
+  height: 400px;
+}
+
+main .form-input {
+  width: 320px;
+  height: 25px;
+  background-color: #fff;
+  border: 1px solid #C5C2C2;
+  margin-left: 7px;
+  border-radius: 3px;
+}
+
+main .primarycolor {
+  background-color: #D35649;
+  text-align: center;
+}
+
+main ::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+main :-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+main ::-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+main ::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+main .key-word {
+  margin-left: 7px;
+  font-family: sans-serif Helvetica;
+  font-size: 13px;
+  text-shadow: none;
+}
+
+main .how-it-works {
+  /*border: 1px solid red;*/
+  background-color: #C5C2C2;
+  width: 100px;
+  text-shadow: none;
+  padding: 5px 3px;
+}
+/*# sourceMappingURL=style.css.map */

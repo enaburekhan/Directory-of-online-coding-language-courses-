@@ -181,7 +181,7 @@ $padding: 5px;
     }
 
     footer {
-        height: 500px;
+        height: 300px;
        
         
         ul {
@@ -191,8 +191,8 @@ $padding: 5px;
         .footer-top {
             position: relative;
             font-size: 5px;
-            display: flex;
-            justify-content: space-between;
+            display: $flex;
+            justify-content: $between;
             border-top: 0.1px solid rgb(143, 133, 133);
             border-bottom: 0.1px solid rgb(143, 133, 133);
             color: $colorWhite;
@@ -214,7 +214,7 @@ $padding: 5px;
         }
 
         .footer-top-wrapper {
-            height: 150px;
+            height: 80px;
             background-color: #000;
             padding: 0 20px;
         }
@@ -222,10 +222,30 @@ $padding: 5px;
         .footer-top-container {
             height: 50px;
             /*border: 1px solid red;*/
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: $flex;
+            justify-content: $between;
+            align-items: $textCenter    ;
             
+        }
+
+        .footer-bottom-wrapper {
+            @include flexeven();
+            align-items: $textCenter;
+            background-color: $colorgray;
+            height: 60px;
+        }
+
+        .footer-bottom-icons {
+            @include flexCenter();
+            width: 200px;
+            color: $colorWhite;
+            /*border: 1px solid red;*/
+        }
+
+        .power-container {
+            font-size: 11px;
+            color: $colorWhite;
+            font-weight: $font-weight;
         }
         
 

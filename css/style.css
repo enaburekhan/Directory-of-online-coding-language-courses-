@@ -218,7 +218,7 @@ main .locate-p {
 }
 
 footer {
-  height: 500px;
+  height: 300px;
 }
 
 footer ul {
@@ -255,7 +255,7 @@ footer .footer-top-icon {
 }
 
 footer .footer-top-wrapper {
-  height: 150px;
+  height: 80px;
   background-color: #000;
   padding: 0 20px;
 }
@@ -272,5 +272,46 @@ footer .footer-top-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+footer .footer-bottom-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #7d8486;
+  height: 60px;
+}
+
+footer .footer-bottom-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  color: #fff;
+  /*border: 1px solid red;*/
+}
+
+footer .power-container {
+  font-size: 11px;
+  color: #fff;
+  font-weight: 900;
 }
 /*# sourceMappingURL=style.css.map */

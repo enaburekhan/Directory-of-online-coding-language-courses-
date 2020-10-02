@@ -20,13 +20,22 @@ header .topnav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  max-width: 100%;
   height: 80px;
   background-color: #D35649;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (min-width: 769px) {
+  header .topnav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 header .echantill {
@@ -38,9 +47,23 @@ header .echantill {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 33%;
+  min-width: 130px;
   color: #fff;
   font-weight: 700;
+}
+
+@media (min-width: 769px) {
+  header .echantill {
+    min-width: 200px;
+    /* border: 1px solid #fff;*/
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  header .echantill .fas {
+    /* border: 1px solid purple;*/
+    padding-right: 4px;
+  }
 }
 
 header .echantill-icons {
@@ -52,7 +75,7 @@ header .echantill-icons {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
+  min-width: 200px;
 }
 
 header .echantill-icons a {
@@ -101,7 +124,7 @@ main .echantill-text {
 
 main .form-key {
   background-color: #C5C2C2;
-  width: 95%;
+  min-width: 335px;
   /*border: 1px solid purple;*/
   height: 100px;
   display: -webkit-box;
@@ -187,6 +210,38 @@ main .four-steps {
   font-size: 13px;
 }
 
+@media (min-width: 769px) {
+  main .four-steps {
+    /*border: 1px solid purple;*/
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 400px;
+    padding: 20px;
+    font-size: 13px;
+  }
+  main .four-steps-nested {
+    /*border: 1px solid red;*/
+    height: 1000px;
+    min-width: 150px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .apply-margin {
+    margin-top: 20px;
+    height: 40%;
+    /*border: 1px solid #111;*/
+    line-height: 18px;
+  }
+  main .locate-p {
+    line-height: 18px;
+    margin: 0 20px 0 20px;
+  }
+}
+
 main .four-steps-nested {
   /*border: 1px solid purple;*/
   height: 110px;
@@ -225,7 +280,6 @@ main .admitted-students img {
 main .admitted-students-container,
 main .future,
 main .istock {
-  /*border: 1px solid red;*/
   background-color: #E17E65;
   color: #fff;
   height: 380px;
@@ -245,6 +299,42 @@ main .istock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 769px) {
+  main .future-nest-reset,
+  main .future-nest {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /*border: 1px solid purple;*/
+    width: 100%;
+  }
+}
+
+main .future-nest-reset {
+  /*border: 1px solid red;*/
+  min-width: 470px;
+}
+
+@media (min-width: 150px) {
+  main .future-nest-reset {
+    min-width: 100%;
+    padding-left: 20px;
+  }
 }
 
 main .registered {
@@ -275,6 +365,7 @@ main .future {
 main .future-nest {
   /*border: 1px solid red;*/
   padding: 5px 5px 5px 20px;
+  width: 100%;
 }
 
 main .free-sign-up {
@@ -290,7 +381,7 @@ main .platform {
 }
 
 footer {
-  height: 300px;
+  min-width: 100%;
 }
 
 footer ul {
@@ -309,15 +400,21 @@ footer .footer-top {
   border-top: 0.1px solid #8f8585;
   border-bottom: 0.1px solid #8f8585;
   color: #fff;
-  width: 50px;
-  padding: 5px 0;
   width: 100%;
+  padding: 5px 0;
+  /*border: 1px solid purple;*/
+}
+
+@media (min-width: 769px) {
+  footer .footer-top {
+    font-size: 10px;
+  }
 }
 
 footer .footer-top-icon {
   color: #fff;
   position: absolute;
-  left: 177px;
+  left: 47.5%;
   top: 13px;
   border: 1px solid #8f8585;
   border-radius: 50%;
@@ -326,11 +423,19 @@ footer .footer-top-icon {
   z-index: 5;
 }
 
+@media (min-width: 769px) {
+  footer .footer-top-icon {
+    left: 48.5%;
+  }
+}
+
 footer .footer-top-wrapper {
   position: relative;
   height: 80px;
   background-color: #000;
   padding: 0 20px;
+  min-width: 100%;
+  /*border: 1px solid red;*/
 }
 
 footer .footer-top-container {

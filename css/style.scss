@@ -22,10 +22,6 @@ html, body {
     flex-direction: column;
 }
 
-
-
-
-
 $primaryColor: #D35649;
 $direction: column;
 $between: space-between;
@@ -42,7 +38,9 @@ $colorblack: #111;
 $colorgray: #7d8486;
 $font-weight-700: 700;
 $padding: 5px;
-
+$colordkgray: #1F1F1F;
+$border-radius: 50%;
+$colorbrown: #E17E65;
 
     header {
       .topnav {
@@ -177,7 +175,68 @@ $padding: 5px;
         .locate-p {
             color: $colorblack;
             font-weight: $font-weight;
-        }   
+        } 
+        
+        .admitted-students img {
+            width: 300px;
+            border-radius: $border-radius;    
+        }
+
+        .admitted-students-container,
+        .future,
+        .istock {
+           /*border: 1px solid red;*/
+           background-color: $colorbrown;
+           color: $colorWhite;
+           height: 380px;
+           @include flexeven();
+           align-items: $textCenter;
+        }
+
+        .registered {
+            font-size: 12px;
+            line-height: 15px;
+            font-weight: $font-weight;
+        }
+
+        .find-a-course {
+            font-size: 11px;
+            font-weight: 400;
+        }
+
+        .course-with-padding {
+            padding: $padding;
+            background-color: $colorWhite;
+            color: $colorbrown;
+            width: 80px;
+            font-size: 10px;
+            font-weight: $font-weight;
+            margin-top: 3px;
+        }
+
+        .future {
+           background-color: #98A4A5;
+           
+        }
+
+        .future-nest {
+            /*border: 1px solid red;*/
+            padding: 5px 5px 5px 20px;
+            
+        }
+
+        .free-sign-up {
+            color: #98A4A5;
+        }
+
+        .istock {
+            background-color: #519BD7;
+        }
+
+        .platform {
+            font-size: 11px;
+        }
+        
     }
 
     footer {
@@ -205,15 +264,16 @@ $padding: 5px;
             color: $colorWhite;
             position: absolute;
             left: 177px;
-            bottom: -215px;
+            top: 13px;
             border: 1px solid rgb(143, 133, 133);
-            border-radius: 50%;
+            border-radius: $border-radius;
             background-color: $colorblack;
             padding: 2px 1px 1px 1px;
             z-index: 5;  
         }
 
         .footer-top-wrapper {
+            position: relative;
             height: 80px;
             background-color: #000;
             padding: 0 20px;
@@ -231,7 +291,7 @@ $padding: 5px;
         .footer-bottom-wrapper {
             @include flexeven();
             align-items: $textCenter;
-            background-color: $colorgray;
+            background-color: $colordkgray;
             height: 60px;
         }
 
@@ -247,7 +307,5 @@ $padding: 5px;
             color: $colorWhite;
             font-weight: $font-weight;
         }
-        
-
 
     }

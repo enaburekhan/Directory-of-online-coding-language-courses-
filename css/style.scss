@@ -89,14 +89,12 @@ $topnavgray: #969696;
             }
 
             .main-top-navbar {
-                /*border: 1px solid purple;*/
                 background-color: $mainNav;
                 border-top-left-radius: $border;
                 border-top-right-radius: $border;
             }
 
             .main-top-icon-container {
-                /*border: 1px solid red;*/
                 @include flexCenter ();
                 justify-content: $between;
                 padding: $padding;
@@ -116,11 +114,9 @@ $topnavgray: #969696;
 
             .top-right-icon {
                 color: $topnavgray;
-                /*border: 1px solid red;*/
             }
 
             .main-middle-icon-container {
-                /*border: 3px solid #111;*/
                 display: $flex;
                 justify-content: $between;
                 padding: $padding;
@@ -128,13 +124,11 @@ $topnavgray: #969696;
             }
 
             .main-middle-icon-left-wrapper {
-                /*border: 1px solid red;*/
                 @include flexCenter();
                 min-width: 63%;
             }
 
             .middle-left {
-                /*border: 1px solid hotpink;*/
                 width: 8%;
                 text-align: $textCenter;
                 background-color: #E6E6E6;
@@ -153,7 +147,6 @@ $topnavgray: #969696;
 
 
              .middle-center .plus {
-                /*border: 1px solid purple;*/
                 width: 4vw;
                 text-align: $textCenter;
                 background-color: $colorWhite;
@@ -172,7 +165,6 @@ $topnavgray: #969696;
             }
 
             .middle-center .curve-arrow {
-                /*border: 1px solid black;*/
                 font-size: 13px;
                 padding: 5px;
                 background-color: $colorWhite;
@@ -186,7 +178,6 @@ $topnavgray: #969696;
 
             
             .main-middle-icon-right-wrapper {
-                /*border: 1px solid purple;*/
                 @include flexCenter();
                 justify-content: $between;
                 width: 36%;
@@ -194,7 +185,6 @@ $topnavgray: #969696;
             }
 
             .middle-center-2 .fab {
-                /*border: 1px solid black;*/
                 text-align: $textCenter; 
                 padding: 2px 2px 5px 2px;
                 background-color: $colorWhite; 
@@ -216,7 +206,6 @@ $topnavgray: #969696;
             }
            
             .middle-right .fas {
-                /*border: 1px solid black;*/
                 color: $darklight;
                 padding: 4px;
                 text-align: $textCenter;
@@ -237,12 +226,10 @@ $topnavgray: #969696;
             }
 
             .echantill {
-                /*border: 1px solid purple;*/
                 width: 10vw;
             }
 
             .echantill-icons {
-                /*border: 1px solid white;*/
                 width: 40vw;
                 font-size: 12px;
                 font-weight: $font-weight;
@@ -279,12 +266,10 @@ $topnavgray: #969696;
       @include tablet {
         .echantill {
             min-width: 200px;
-           /* border: 1px solid #fff;*/
             justify-content: $flexstart;
         } 
         
         .echantill .fas {
-           /* border: 1px solid purple;*/
             padding-right: 4px;
         }
       }
@@ -306,7 +291,6 @@ $topnavgray: #969696;
          }
         
         .echantill-edu {
-            /*border: 1px solid #fff;*/
             @include flexCenter(); 
             position: absolute;
             width: $width-95;
@@ -326,7 +310,6 @@ $topnavgray: #969696;
         .form-key {
             background-color: $formColor;
             min-width: 335px;
-            /*border: 1px solid purple;*/
             height: 100px;
             @include flexeven();
             border-radius: $border;  
@@ -340,7 +323,6 @@ $topnavgray: #969696;
             }
 
             .input-wrapper {
-                /*border: 1px solid red;*/
                 display: $flex;
                 justify-content: $jcenter;
                 padding-right: 10px;
@@ -400,7 +382,6 @@ $topnavgray: #969696;
 
         @include tablet {
             .key-word {
-               /*border: 1px solid red;*/
                 display: $flex;
                 align-items: $alignEnd;
                 justify-content: $flexstart;
@@ -412,7 +393,6 @@ $topnavgray: #969696;
         }
 
         .how-it-works {
-            /*border: 1px solid red;*/
             background-color: $formColor;
             width: 100px;
             text-shadow: none;
@@ -427,7 +407,6 @@ $topnavgray: #969696;
         }
 
         .four-steps {
-            /*border: 1px solid red;*/
             height: 450px;
             font-size: 13px;  
         }
@@ -446,7 +425,6 @@ $topnavgray: #969696;
             }
 
             .four-steps-nested {
-                /*border: 1px solid red;*/
                 height: 1000px;
                 min-width: 150px; 
                 justify-content: $between; 
@@ -462,7 +440,6 @@ $topnavgray: #969696;
             .apply-margin {
                 margin-top: 20px;
                 height: 40%;
-                /*border: 1px solid #111;*/
                 line-height: 18px;
             } 
 
@@ -481,7 +458,6 @@ $topnavgray: #969696;
         }
 
         .four-steps-nested {
-            /*border: 1px solid purple;*/
             height: 110px;
             min-width: 150px;
             @include flexCenter();
@@ -521,7 +497,6 @@ $topnavgray: #969696;
             .future-nest {
                @include flexeven();
                align-items: $alignCenter;
-               /*border: 1px solid purple;*/
                width: 100%;
             }
         }
@@ -645,7 +620,6 @@ $topnavgray: #969696;
             background-color: #000;
             padding: 0 20px;
             min-width: 100%;
-            /*border: 1px solid red;*/
         }
 
         @include desktop {
@@ -666,8 +640,7 @@ $topnavgray: #969696;
             border-bottom: 0.1px solid rgb(143, 133, 133);
             color: $colorWhite;
             width:  100%;
-            padding: 5px 0;
-            /*border: 1px solid purple;*/  
+            padding: 5px 0; 
         }
 
         @include desktop {
@@ -717,7 +690,6 @@ $topnavgray: #969696;
 
         .footer-top-container {
             height: 50px;
-            /*border: 1px solid red;*/
             display: $flex;
             justify-content: $between;
             align-items: $textCenter    ;
@@ -733,11 +705,48 @@ $topnavgray: #969696;
                 background-color: #000;
             }
 
-            .footer-top-middle {
-                border: 1px solid red;
+            .footer-top-middle,
+            .footer-center-middle {
                 text-align: $textCenter;
                 font-weight: $font-weight;
                 color: $colorWhite;
+                width: 50%;
+                height: 13vh;
+                @include flexeven();
+                align-items: $alignCenter;
+            }
+
+            .footer-top-middle-nested {
+                text-shadow: 0 0 2px #000;
+            }
+
+            ::placeholder {
+                font-size: 9px;
+                text-align: $textCenter;
+                color: $colorWhite;
+            }
+
+            .eric {
+                background-color: #000;
+                border: 1px solid rgb(80, 72, 72);
+            }
+
+            .footer-top-middle-nested .send {
+                width: 4vw;
+                margin-left: -4.5px;
+                text-align: $textCenter;
+                background-color: #444444;
+                font-weight: $font-weight;
+                border: 1px solid rgb(80, 72, 72);
+                
+            }
+
+            .info-eric {
+                color: $primaryColor;
+            }
+
+            .possibility {
+                color: $primaryColor;
             }
         }
 
@@ -748,17 +757,38 @@ $topnavgray: #969696;
             height: 60px;
         }
 
+        @include desktop {
+            .footer-bottom-wrapper {
+                flex-direction: $row;
+                justify-content: $between;   
+            }
+        }
+
         .footer-bottom-icons {
             @include flexCenter();
             width: 200px;
             color: $colorWhite;
-            /*border: 1px solid red;*/
+        }
+
+        @include desktop {
+            .footer-bottom-icons {
+                width: 30%;
+            } 
         }
 
         .power-container {
             font-size: 11px;
             color: $colorWhite;
             font-weight: $font-weight;
+        }
+
+        @include desktop {
+            .power-container {
+               width: 50%;
+               display: $flex;
+               justify-content: flex-end;
+               padding-right: 20px;
+            } 
         }
 
     }

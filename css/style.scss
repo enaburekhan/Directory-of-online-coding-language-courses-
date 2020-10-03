@@ -49,7 +49,6 @@ $mobile: 150px;
      }
  }
   
-
 $primaryColor: #D35649;
 $direction: column;
 $between: space-between;
@@ -76,6 +75,8 @@ $alignEnd: flex-end;
 $nativeBlue: #519BD7;
 $none: none;
 $mainNav: #D2D2D2;
+$darklight: lighten(#111, 60%);
+$topnavgray: #969696;
 
     header {
 
@@ -114,21 +115,138 @@ $mainNav: #D2D2D2;
             }
 
             .top-right-icon {
-                color: #969696;
+                color: $topnavgray;
+                /*border: 1px solid red;*/
             }
 
             .main-middle-icon-container {
-                border: 1px solid #111;
-                @include flexCenter ();
+                /*border: 3px solid #111;*/
+                display: $flex;
                 justify-content: $between;
+                padding: $padding;
+                min-width: 100%;
+            }
+
+            .main-middle-icon-left-wrapper {
+                /*border: 1px solid red;*/
+                @include flexCenter();
+                min-width: 63%;
             }
 
             .middle-left {
-                border: 1px solid purple;
-                width: 40px;
+                /*border: 1px solid hotpink;*/
+                width: 8%;
                 text-align: $textCenter;
+                background-color: #E6E6E6;
+                @include flexCenter(); 
+                border-radius: 2px;
+                padding: 4px 3px; 
             }
 
+            .bk-arrow {
+               color: $darklight;
+            }
+
+            .frt-arrow {
+               color: $topnavgray;
+            }
+
+
+             .middle-center .plus {
+                /*border: 1px solid purple;*/
+                width: 4vw;
+                text-align: $textCenter;
+                background-color: $colorWhite;
+                font-size: 11px;
+                padding: 6px;
+                margin-right: -4.5px;
+                color: $topnavgray;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            }
+
+            .middle-center .input-nav {
+                width: 45vw;
+                padding: 3px;
+                border: 0.01px solid $colorWhite;
+            }
+
+            .middle-center .curve-arrow {
+                /*border: 1px solid black;*/
+                font-size: 13px;
+                padding: 5px;
+                background-color: $colorWhite;
+                width: 4vw;
+                text-align: $textCenter;
+                margin-left: -5px; 
+                color: $topnavgray; 
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+
+            
+            .main-middle-icon-right-wrapper {
+                /*border: 1px solid purple;*/
+                @include flexCenter();
+                justify-content: $between;
+                width: 36%;
+                margin-right: 5px;
+            }
+
+            .middle-center-2 .fab {
+                /*border: 1px solid black;*/
+                text-align: $textCenter; 
+                padding: 2px 2px 5px 2px;
+                background-color: $colorWhite; 
+                width: 3vw; 
+                color: $topnavgray; 
+                margin: -3px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+
+            .middle-center-2 .input-nav-2 {
+                width: 29vw;
+                padding: 3px;
+                margin: -2px;
+                border: 0.01px solid $colorWhite;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                
+            }
+           
+            .middle-right .fas {
+                /*border: 1px solid black;*/
+                color: $darklight;
+                padding: 4px;
+                text-align: $textCenter;
+                width: 3vw;
+                border-radius: $border;
+                background-color: #E6E6E6;
+            }
+
+            .main-bottom-navbar {
+                background-color: $primaryColor;
+                height: 8vh;
+                width: 100%;
+                @include flexCenter();
+            }
+
+            .main-bottom-navbar a {
+                text-decoration: none;
+            }
+
+            .echantill {
+                /*border: 1px solid purple;*/
+                width: 10vw;
+            }
+
+            .echantill-icons {
+                /*border: 1px solid white;*/
+                width: 40vw;
+                font-size: 12px;
+                font-weight: $font-weight;
+            }
 
         }
 
@@ -262,6 +380,12 @@ $mainNav: #D2D2D2;
                 background-color: $nativeBlue;
             }
         }
+
+        @include desktop {
+            .primarycolor {
+                background-color: $primaryColor;
+            }
+        }
         ::placeholder {
             color: $colorWhite;
             opacity: 1;
@@ -315,6 +439,12 @@ $mainNav: #D2D2D2;
                 font-size: 13px;  
             }
 
+            @include desktop {
+                .four-steps {
+                    @include gridColumn;
+                }
+            }
+
             .four-steps-nested {
                 /*border: 1px solid red;*/
                 height: 1000px;
@@ -323,12 +453,25 @@ $mainNav: #D2D2D2;
   
             }
 
+            @include desktop {
+                .four-steps-nested {
+                    height: 50vh;
+                } 
+            }
+
             .apply-margin {
                 margin-top: 20px;
                 height: 40%;
                 /*border: 1px solid #111;*/
                 line-height: 18px;
             } 
+
+            @include desktop {
+                .apply-margin {
+                    margin-top: 10px;
+                    line-height: 18px;
+                } 
+            }
 
             .locate-p {
                 line-height: 18px;
@@ -383,9 +526,20 @@ $mainNav: #D2D2D2;
             }
         }
 
+        @include desktop {
+            .admitted-students-container,
+            .future,
+            .istock {
+               display: flex;
+               flex-direction: row;
+               border: 1px solid white;
+              
+            }
+
+        }
+
         .future-nest-reset {
-            /*border: 1px solid red;*/
-            min-width: 470px;   
+            width: 50%;   
         }
 
         @include mobile {
@@ -393,6 +547,16 @@ $mainNav: #D2D2D2;
                 min-width: 100%;
                 padding-left: 20px;
             }   
+
+        }
+
+        @include desktop {
+            .problem-std {
+                min-width: 30%;
+                @include flexeven();
+                height: 20vh;
+                font-size: 20px;
+            }
 
         }
 
@@ -425,9 +589,26 @@ $mainNav: #D2D2D2;
         .future-nest {
             /*border: 1px solid red;*/
             padding: 5px 5px 5px 20px;
-            width: 100%;
-            
+            width: 100%;  
         }
+
+        @include desktop {
+            .future-nest {
+               /* border: 1px solid red;*/
+                padding: 0;
+                width: 50%; 
+                height: 20vh; 
+                align-items: $flexstart;
+               
+            }
+
+            .future-desktop-nest {
+                justify-content: $jcenter;
+                line-height: 25px;
+                font-size: 20px;
+            }
+        }
+
 
         .free-sign-up {
             color: #98A4A5;
@@ -440,13 +621,40 @@ $mainNav: #D2D2D2;
         .platform {
             font-size: 11px;
         }
+
+        @include desktop {
+            .platform {
+                font-size: 14px;
+            }
+        }
         
     }
 
     footer {
        min-width: 100%;
+       .footer-middle-container {
+           display: $none;
+       }
         ul {
             list-style-type: none;
+        }
+
+        .footer-top-wrapper {
+            position: relative;
+            height: 80px;
+            background-color: #000;
+            padding: 0 20px;
+            min-width: 100%;
+            /*border: 1px solid red;*/
+        }
+
+        @include desktop {
+            .footer-top-wrapper {
+                display: $flex;
+                justify-content: $jcenter;
+                align-items: $alignCenter;
+                
+            }  
         }
 
         .footer-top {
@@ -459,7 +667,14 @@ $mainNav: #D2D2D2;
             color: $colorWhite;
             width:  100%;
             padding: 5px 0;
-            /*border: 1px solid purple;*/   
+            /*border: 1px solid purple;*/  
+        }
+
+        @include desktop {
+            .footer-top {
+                width: 85vw;
+                font-size: 20px;
+            }
         }
 
         @include tablet {
@@ -484,16 +699,21 @@ $mainNav: #D2D2D2;
             .footer-top-icon { 
               left: 48.5%;
             }
+        } 
+        
+        @include desktop {
+            .footer-top-icon { 
+              left: 47%;
+              top: 15px;
+              width: 6vw;
+              height: 6vh;
+              text-align: $textCenter;
+              padding: 25px 8px;
+              display: $flex;
+              align-items: $alignCenter;
+              justify-content: $jcenter; 
+            }
         }   
-
-        .footer-top-wrapper {
-            position: relative;
-            height: 80px;
-            background-color: #000;
-            padding: 0 20px;
-            min-width: 100%;
-            /*border: 1px solid red;*/
-        }
 
         .footer-top-container {
             height: 50px;
@@ -502,6 +722,23 @@ $mainNav: #D2D2D2;
             justify-content: $between;
             align-items: $textCenter    ;
             
+        }
+
+        @include desktop {
+            .footer-middle-container {
+                @include flexCenter();
+                justify-content: $jcenter;
+                font-size: 11px;
+                color: $colorWhite;
+                background-color: #000;
+            }
+
+            .footer-top-middle {
+                border: 1px solid red;
+                text-align: $textCenter;
+                font-weight: $font-weight;
+                color: $colorWhite;
+            }
         }
 
         .footer-bottom-wrapper {

@@ -297,6 +297,36 @@ $topnavgray: #969696;
     }
 
     main {
+        
+        .filter-container {
+            display: $none;
+        }
+        @include desktop {
+            .filter-container {
+                display: $flex;
+                flex-direction: $direction;
+                align-items: $alignCenter;
+                justify-content: space-around;
+                border: 1px solid purple;
+                height: 10vh;
+            }
+
+            .seach-course {
+                width: 5vw;
+            }
+
+            .clear-filter .far,
+            .re-fill {
+                color: $colorWhite;
+                background-color: #E5AB5B;
+            }
+
+            .re-fill {
+                border: 1px solid black;
+                width: 6vw;
+                margin-right: -20px;
+            }
+        }
 
         .search-container {
             height: 80vh;
@@ -309,8 +339,6 @@ $topnavgray: #969696;
             .search-container {
                 /*border: 1px solid red;*/
                 padding-top: 110px;
-                
-    
             }
         }
 

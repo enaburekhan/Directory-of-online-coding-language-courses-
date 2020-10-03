@@ -41,6 +41,13 @@ $mobile: 150px;
          @content;
      }
  }
+
+ $desktop: 1024px;
+ @mixin desktop {
+     @media (min-width: #{$desktop}) {
+         @content;
+     }
+ }
   
 
 $primaryColor: #D35649;
@@ -63,8 +70,68 @@ $colordkgray: #1F1F1F;
 $border-radius: 50%;
 $colorbrown: #E17E65;
 $alignCenter: center;
+$row: row;
+$jcenter: center;
+$alignEnd: flex-end;
+$nativeBlue: #519BD7;
+$none: none;
+$mainNav: #D2D2D2;
 
     header {
+
+        .main-navbar {
+            display: $none;
+        }
+        @include desktop {
+            .main-navbar {
+                display: block;
+            }
+
+            .main-top-navbar {
+                /*border: 1px solid purple;*/
+                background-color: $mainNav;
+                border-top-left-radius: $border;
+                border-top-right-radius: $border;
+            }
+
+            .main-top-icon-container {
+                /*border: 1px solid red;*/
+                @include flexCenter ();
+                justify-content: $between;
+                padding: $padding;
+            }
+
+            .top-left-icon .one {
+                color: #E76D6B;
+            }
+
+            .top-left-icon .two {
+                color: #DFBC43;
+            }
+
+            .top-left-icon .three {
+                color: #3DBA78;
+            }
+
+            .top-right-icon {
+                color: #969696;
+            }
+
+            .main-middle-icon-container {
+                border: 1px solid #111;
+                @include flexCenter ();
+                justify-content: $between;
+            }
+
+            .middle-left {
+                border: 1px solid purple;
+                width: 40px;
+                text-align: $textCenter;
+            }
+
+
+        }
+
       .topnav {
         @include flexCenter();  
          max-width: 100%;  
@@ -76,9 +143,13 @@ $alignCenter: center;
         @include tablet {
             .topnav {
                flex-direction: row;
-                 
                 }
+        }
 
+        @include desktop {
+            .topnav {
+                display: $none;
+            }
         }
       .echantill {
           @include flexCenter();
@@ -140,11 +211,25 @@ $alignCenter: center;
             /*border: 1px solid purple;*/
             height: 100px;
             @include flexeven();
-            border-radius: $border;
-            
+            border-radius: $border;  
         }
 
-        .bg-img {
+        @include tablet {
+            .form-key {
+                width: 400px;
+                align-items: $alignCenter;
+                border: 1px solid $formColor;
+            }
+
+            .input-wrapper {
+                /*border: 1px solid red;*/
+                display: $flex;
+                justify-content: $jcenter;
+                padding-right: 10px;
+            } 
+        }
+
+        .bg-img {   
             width: 100%;
             height: 400px;
         }
@@ -155,15 +240,27 @@ $alignCenter: center;
             background-color: $colorWhite;
             border: 1px solid $formColor;
             margin-left: 7px;
-            border-radius: $border-3;
-            
+            border-radius: $border-3;    
+        }
+
+        @include tablet {
+            .form-input {
+                width: 280px;
+            }
         }
 
         .primarycolor {
             background-color: $primaryColor;
-            text-align: $textCenter;
-            
-            
+            text-align: $textCenter;  
+        }
+
+        @include tablet {
+            .primarycolor {
+                width: 70px;
+                border-radius: 0;
+                margin: -1px;
+                background-color: $nativeBlue;
+            }
         }
         ::placeholder {
             color: $colorWhite;
@@ -175,6 +272,19 @@ $alignCenter: center;
             font-family:  sans-serif Helvetica;
             font-size: 13px;
             text-shadow: none;
+        }
+
+        @include tablet {
+            .key-word {
+               /*border: 1px solid red;*/
+                display: $flex;
+                align-items: $alignEnd;
+                justify-content: $flexstart;
+                height: 40px;
+                width: 90%;
+                font-weight: $font-weight;
+                
+            }
         }
 
         .how-it-works {
@@ -200,9 +310,7 @@ $alignCenter: center;
 
         @include tablet {
             .four-steps {
-                /*border: 1px solid purple;*/
-                @include gridColumn;
-                height: 400px;
+                height: 500px;
                 padding: 20px;
                 font-size: 13px;  
             }

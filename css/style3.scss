@@ -300,6 +300,10 @@ $scalapcolor: #4A6786;
        margin-top: 65px;
        padding: 20px;
 
+       @include desktop {
+           margin-top: 100px;
+       }
+
        .scala-container {
            @include flexeven();
            /*border: 1px solid red;*/
@@ -417,11 +421,20 @@ $scalapcolor: #4A6786;
            width: 10vw;
        }
 
-       /*.map-directons {
+       .map-directions-container {
+           display: $none;
+       }
+
+       @include tablet {
+        .map-directions-container {
+            display: block;
+        }
+          
+       .map-directons {
            display: $flex;
            align-items: $alignCenter;
            justify-content: $jcenter;
-           border: 1px solid hotpink;
+           /*border: 1px solid hotpink;*/
            height: 10vh;
            
        }
@@ -434,7 +447,13 @@ $scalapcolor: #4A6786;
        .map-directons p {
            font-weight: $font-weight;
            padding-left: 1px;
-       }*/
+       }
+
+       .google-img {
+           width: 100%;
+       }
+     }
+
    }
 
 

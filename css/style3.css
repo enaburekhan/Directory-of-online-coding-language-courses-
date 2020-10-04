@@ -271,24 +271,12 @@ header .echantill-icons a {
 main {
   margin-top: 65px;
   padding: 20px;
-  /*.map-directons {
-           display: $flex;
-           align-items: $alignCenter;
-           justify-content: $jcenter;
-           border: 1px solid hotpink;
-           height: 10vh;
-           
-       }
+}
 
-       .map-directons .fas,
-       .map-directons p {
-           color: $primaryColor;
-       }
-
-       .map-directons p {
-           font-weight: $font-weight;
-           padding-left: 1px;
-       }*/
+@media (min-width: 1024px) {
+  main {
+    margin-top: 100px;
+  }
 }
 
 main .scala-container {
@@ -448,6 +436,40 @@ main .sign-up p {
   color: #60b331;
   cursor: pointer;
   width: 10vw;
+}
+
+main .map-directions-container {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  main .map-directions-container {
+    display: block;
+  }
+  main .map-directons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /*border: 1px solid hotpink;*/
+    height: 10vh;
+  }
+  main .map-directons .fas,
+  main .map-directons p {
+    color: #D35649;
+  }
+  main .map-directons p {
+    font-weight: 900;
+    padding-left: 1px;
+  }
+  main .google-img {
+    width: 100%;
+  }
 }
 
 footer {

@@ -308,6 +308,12 @@ $topnavgray: #969696;
                 background-color: $nativeBlue;
                 color: $colorWhite;
                 border: 1px solid  $nativeBlue;
+                padding: 1px;
+            }
+
+            .seach-course a {
+                text-decoration: none;
+                color: $colorWhite;
             }
 
             .clear-filter .far,
@@ -324,7 +330,7 @@ $topnavgray: #969696;
             }
 
             .re-fill {
-                width: 7vw;
+                width: 80px;
                 margin-left: -6px;
                 padding: 1px;
             }

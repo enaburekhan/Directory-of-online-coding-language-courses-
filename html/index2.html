@@ -89,7 +89,7 @@
         <section class="search-container">
             <p class="result-search">Showing 12 results for available related courses</p>
             <section class="filter-container">
-                <p>Filter By language,level, duration and skills. </p>
+                <p>Filter By language, level, course, duration and skills. </p>
                 <form>
                     <select name="language">
                        <optgroup>
@@ -103,6 +103,13 @@
                             <option>Beginner</option>
                             <option>Intermediate</option>
                             <option>Advanced</option>
+                        </optgroup>            
+                     </select> 
+                     <select name="course">
+                        <optgroup>
+                            <option>Scala</option>
+                            <option>Javascript</option>
+                            <option>Ruby</option>
                         </optgroup>            
                      </select> 
                      <select name="duration">
@@ -119,7 +126,9 @@
                             <option>Data engineering</option>
                         </optgroup>            
                      </select>
-                     <input type="text" class="seach-course" placeholder="Search"/> 
+                     <!--<input type="button" class="seach-course" placeholder="Search"/>--> 
+                     <button type="search" class="seach-course"><a href="#">Search</a></button>
+                  
                      <span class="clear-filter">
                         <i class='far'>&#xf044;</i>
                         <input type="text" class="re-fill" placeholder="clear filter">

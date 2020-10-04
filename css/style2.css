@@ -294,6 +294,11 @@ main .filter-container {
     background-color: #519BD7;
     color: #fff;
     border: 1px solid #519BD7;
+    padding: 1px;
+  }
+  main .seach-course a {
+    text-decoration: none;
+    color: #fff;
   }
   main .clear-filter .far,
   main .re-fill {
@@ -306,7 +311,7 @@ main .filter-container {
     padding: 0 1px 2.3px 1px;
   }
   main .re-fill {
-    width: 7vw;
+    width: 80px;
     margin-left: -6px;
     padding: 1px;
   }

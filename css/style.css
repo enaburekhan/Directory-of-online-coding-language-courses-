@@ -11,6 +11,14 @@ html, body {
   font-family: "acumin-pro","Acumin Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+header .fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 9;
+}
+
 header .main-navbar {
   display: none;
 }
@@ -259,6 +267,10 @@ header .echantill-icons {
 
 header .echantill-icons a {
   color: #fff;
+}
+
+main {
+  margin-top: 80px;
 }
 
 main .echantill-edu-container {

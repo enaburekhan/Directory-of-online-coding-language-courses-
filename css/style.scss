@@ -80,6 +80,14 @@ $topnavgray: #969696;
 
     header {
 
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            z-index: 9;
+        }
+
         .main-navbar {
             display: $none;
         }
@@ -286,6 +294,9 @@ $topnavgray: #969696;
     }
 
     main {
+
+        margin-top: 80px;
+
          .echantill-edu-container {
             @include flexCenter();
          }

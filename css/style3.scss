@@ -302,7 +302,7 @@ $scalapcolor: #4A6786;
 
        .scala-container {
            @include flexeven();
-           border: 1px solid red;
+           /*border: 1px solid red;*/
            height: 14vh;
            /*padding: 20px;*/
        }
@@ -341,18 +341,87 @@ $scalapcolor: #4A6786;
        .click-details {
            display: $flex;
            justify-content: $jcenter;
-           border: 1px solid black;
+           /*border: 1px solid black;*/
            align-items: $alignCenter;
            text-align: $textCenter;
            height: 7vh;
            background-color: #F5F5F5;
        }
 
-       .scala-text-container {
-           border: 1px solid purple;
-           /*height: 40vh;*/
+       .click-details .fas {
+           margin-right: 5px;
+           padding-bottom: 3px;
+           text-align: $textCenter;
+       }
+
+       .click-details p {
+           font-size: 18px;
+           
+       }
+
+       .scala-text-container {      
+           /*border: 1px solid purple;*/
+           min-height: 40vh;
            width: 100%;
        }
+
+       .register-form {
+           font-size: 13px;
+           height: 40vh;
+           /*border: 1px solid red;*/
+           display: $flex;
+           flex-direction: $direction;
+           justify-content: space-evenly;
+           width: 40vw;  
+       }
+
+       .register-form-container {
+           /*border: 1px solid black;*/
+           display: $flex;
+           justify-content: $jcenter;
+           /*align-items: $alignCenter;*/
+           height: 55vh;
+       }
+
+       .sign-up {
+           display: $flex;
+           align-items: $alignCenter;
+       }
+
+       .sign-up button {
+           /*border: 1px solid hotpink;*/
+           width: 70px;
+           font-size: 11px;
+           background-color: $primaryColor;
+           color: $colorWhite;
+           padding: 2px 0;
+           margin-right: 4px;
+           border: 1px solid $primaryColor;
+       }
+
+       .sign-up p {
+           font-size: 10px;
+           color: #60b331;
+       }
+
+       /*.map-directons {
+           display: $flex;
+           align-items: $alignCenter;
+           justify-content: $jcenter;
+           border: 1px solid hotpink;
+           height: 10vh;
+           
+       }
+
+       .map-directons .fas,
+       .map-directons p {
+           color: $primaryColor;
+       }
+
+       .map-directons p {
+           font-weight: $font-weight;
+           padding-left: 1px;
+       }*/
    }
 
 

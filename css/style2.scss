@@ -1,63 +1,65 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    font-family: "acumin-pro","Acumin Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+html,
+body {
+  font-family: "acumin-pro", "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 
 @mixin flexCenter {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+
 @mixin flexeven {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 @mixin gridColumn {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-
-
 $mobile: 150px;
- @mixin mobile {
-     @media (min-width: #{$mobile}) {
-         @content;
-     }
- }
 
- $tablet: 769px;
- @mixin tablet {
-     @media (min-width: #{$tablet}) {
-         @content;
-     }
- }
+@mixin mobile {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
 
- $desktop: 1024px;
- @mixin desktop {
-     @media (min-width: #{$desktop}) {
-         @content;
-     }
- }
-  
-$primaryColor: #D35649;
-$secondaryColor: #EEEEEE;
+$tablet: 769px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+$desktop: 1024px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+$primaryColor: #d35649;
+$secondaryColor: #eee;
 $direction: column;
 $between: space-between;
 $colorWhite: #fff;
-$formColor: #C5C2C2;
+$formColor: #c5c2c2;
 $border: 5px;
 $font-weight: 900;
 $textCenter: center;
@@ -67,543 +69,549 @@ $colorblack: #111;
 $colorgray: #7d8486;
 $font-weight-700: 700;
 $padding: 5px;
-$colordkgray: #1F1F1F;
+$colordkgray: #1f1f1f;
 $border-radius: 50%;
-$colorbrown: #E17E65;
-$lightbrown: lighten(#E17E65, 10%);
+$colorbrown: #e17e65;
+$lightbrown: lighten(#e17e65, 10%);
 $alignCenter: center;
-$row: row;  
+$row: row;
 $jcenter: center;
 $alignEnd: flex-end;
-$nativeBlue: #519BD7;
+$nativeBlue: #519bd7;
 $none: none;
-$mainNav: #D2D2D2;
+$mainNav: #d2d2d2;
 $darklight: lighten(#111, 60%);
 $topnavgray: #969696;
 
-    header {
-          .fixed-top {
-              position: fixed;
-              top: 0;
-              width: 100%;
-              overflow: hidden;
-          }
+header {
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+  }
 
-        .main-navbar {
-            display: $none;
-        }
+  .main-navbar {
+    display: $none;
+  }
 
-        @include desktop {
-            .main-navbar {
-                display: block;
-            }
-
-            .main-top-navbar {
-                background-color: $mainNav;
-                border-top-left-radius: $border;
-                border-top-right-radius: $border;
-            }
-
-            .main-top-icon-container {
-                @include flexCenter ();
-                justify-content: $between;
-                padding: $padding;
-            }
-
-            .top-left-icon .one {
-                color: #E76D6B;
-            }
-
-            .top-left-icon .two {
-                color: #DFBC43;
-            }
-
-            .top-left-icon .three {
-                color: #3DBA78;
-            }
-
-            .top-right-icon {
-                color: $topnavgray;
-            }
-
-            .main-middle-icon-container {
-                display: $flex;
-                justify-content: $between;
-                padding: $padding;
-                min-width: 100%;
-            }
-
-            .main-middle-icon-left-wrapper {
-                @include flexCenter();
-                min-width: 63%;
-            }
-
-            .middle-left {
-                width: 8%;
-                text-align: $textCenter;
-                background-color: #E6E6E6;
-                @include flexCenter(); 
-                border-radius: 2px;
-                padding: 4px 3px; 
-            }
-
-            .bk-arrow {
-               color: $darklight;
-            }
-
-            .frt-arrow {
-               color: $topnavgray;
-            }
-
-
-             .middle-center .plus {
-                width: 4vw;
-                text-align: $textCenter;
-                background-color: $colorWhite;
-                font-size: 11px;
-                padding: 6px;
-                margin-right: -4.5px;
-                color: $topnavgray;
-                border-top-left-radius: 3px;
-                border-bottom-left-radius: 3px;
-            }
-
-            .middle-center .input-nav {
-                width: 45vw;
-                padding: 3px;
-                border: 0.01px solid $colorWhite;
-            }
-
-            .middle-center .curve-arrow {
-                font-size: 13px;
-                padding: 5px;
-                background-color: $colorWhite;
-                width: 4vw;
-                text-align: $textCenter;
-                margin-left: -5px; 
-                color: $topnavgray; 
-                border-top-right-radius: 3px;
-                border-bottom-right-radius: 3px;
-            }
-
-            
-            .main-middle-icon-right-wrapper {
-                @include flexCenter();
-                justify-content: $between;
-                width: 36%;
-                margin-right: 5px;
-            }
-
-            .middle-center-2 .fab {
-                text-align: $textCenter; 
-                padding: 2px 2px 5px 2px;
-                background-color: $colorWhite; 
-                width: 3vw; 
-                color: $topnavgray; 
-                margin: -3px;
-                border-top-left-radius: 10px;
-                border-bottom-left-radius: 10px;
-            }
-
-            .middle-center-2 .input-nav-2 {
-                width: 29vw;
-                padding: 3px;
-                margin: -2px;
-                border: 0.01px solid $colorWhite;
-                border-top-right-radius: 10px;
-                border-bottom-right-radius: 10px;
-                
-            }
-           
-            .middle-right .fas {
-                color: $darklight;
-                padding: 4px;
-                text-align: $textCenter;
-                width: 3vw;
-                border-radius: $border;
-                background-color: #E6E6E6;
-            }
-
-            .main-bottom-navbar {
-                background-color: $primaryColor;
-                height: 8vh;
-                width: 100%;
-                @include flexCenter();
-            }
-
-            .main-bottom-navbar a {
-                text-decoration: none;
-            }
-
-            .echantill {
-                width: 10vw;
-            }
-
-            .echantill-icons {
-                width: 40vw;
-                font-size: 12px;
-                font-weight: $font-weight;
-            }
-
-        }
-
-      .topnav {
-        @include flexCenter();  
-         max-width: 100%;  
-         height: 80px;
-         background-color: $primaryColor;
-         flex-direction: $direction;
-        }
-
-        @include tablet {
-            .topnav {
-               flex-direction: row;
-                }
-        }
-
-        @include desktop {
-            .topnav {
-                display: $none;
-            }
-        }
-      .echantill {
-          @include flexCenter();
-          min-width: 130px;
-          color: $colorWhite;
-          font-weight: 700;
-      }
-
-      @include tablet {
-        .echantill {
-            min-width: 200px;
-            justify-content: $flexstart;
-        } 
-        
-        .echantill .fas {
-            padding-right: 4px;
-        }
-      }
-      
-      .echantill-icons {
-        @include flexCenter(); 
-        min-width: 200px;
-      }
-
-      .echantill-icons a {
-        color: $colorWhite;
-      }
-         
+  @include desktop {
+    .main-navbar {
+      display: block;
     }
 
-    main {
-
-        margin-top: 10px;
-        
-        .filter-container {
-            display: $none;
-        }
-        @include desktop {
-            .filter-container {
-                display: $flex;
-                flex-direction: $direction;
-                align-items: $alignCenter;
-                justify-content: space-around;
-                height: 15vh;
-                width: 100%;
-            }
-
-            .seach-course {
-                width: 5vw;
-                background-color: $nativeBlue;
-                color: $colorWhite;
-                border: 1px solid  $nativeBlue;
-                padding: 1px;
-            }
-
-            .seach-course a {
-                text-decoration: none;
-                color: $colorWhite;
-            }
-
-            .clear-filter .far,
-            .re-fill {
-                color: $colorWhite;
-                background-color: #E5AB5B;
-                font-weight: $font-weight;
-                border: 1px solid #E5AB5B;
-            }
-
-            .clear-filter .far {
-                padding: 0 1px 2.3px 1px;
-                
-            }
-
-            .re-fill {
-                width: 80px;
-                margin-left: -6px;
-                padding: 1px;
-            }
-
-            ::placeholder {
-                color: $colorWhite;
-                text-align: $textCenter;
-               
-            }
-        }
-
-        .search-container {
-            height: 80vh;
-            padding-top: 79px;
-            background-color: $secondaryColor;
-
-        }
-
-        @include desktop {
-            .search-container {
-                padding-top: 110px;
-            }
-        }
-
-        .result-search {  
-          background-color: $mainNav;
-          padding: 10px;
-          color: $colorblack;
-          width: 100vw; 
-          text-align: $textCenter;
-          z-index: 3;
-        }
-
-
-        .courses {
-            height: 60vh;
-            background-color: $secondaryColor;
-        }
-
-        @include tablet {
-            .courses {
-            display: $flex;
-            justify-content: $between;
-            align-items: $alignCenter;
-            height: 60%;
-            }
-        }
-
-        ul {
-            list-style-type: none;
-            width: 100vw;
-            text-align: $textCenter;
-        }
-
-        ul a {
-            text-decoration: none;
-            font-size: 20px;
-            line-height: 35px;
-            &:hover {
-                color: $primaryColor;
-            }
-        }
-
-       
+    .main-top-navbar {
+      background-color: $mainNav;
+      border-top-left-radius: $border;
+      border-top-right-radius: $border;
     }
 
+    .main-top-icon-container {
+      @include flexCenter ();
 
-    footer {
-        min-width: 100%;
-        .footer-middle-container {
-            display: $none;
-        }
-         ul {
-             list-style-type: none;
-         }
- 
-         .footer-top-wrapper {
-             position: relative;
-             height: 80px;
-             background-color: #000;
-             padding: 0 20px;
-             min-width: 100%;
-         }
- 
-         @include desktop {
-             .footer-top-wrapper {
-                 display: $flex;
-                 justify-content: $jcenter;
-                 align-items: $alignCenter;
-                 
-             }  
-         }
- 
-         .footer-top {
-             position: relative;
-             font-size: 5.5px;
-             display: $flex;
-             justify-content: $between;
-             border-top: 0.1px solid rgb(143, 133, 133);
-             border-bottom: 0.1px solid rgb(143, 133, 133);
-             color: $colorWhite;
-             width:  100%;
-             padding: 5px 0; 
-         }
- 
-         @include desktop {
-             .footer-top {
-                 width: 85vw;
-                 font-size: 20px;
-             }
-         }
- 
-         @include tablet {
-             .footer-top {
-                 font-size: 10px;
-             }
-         }
- 
-         .footer-top-icon {
-             color: $colorWhite;
-             position: absolute;
-             left: 47.5%;
-             top: 13px;
-             border: 1px solid rgb(143, 133, 133);
-             border-radius: $border-radius;
-             background-color: $colorblack;
-             padding: 2px 1px 1px 1px;
-             z-index: 5;  
-         }
- 
-         @include tablet {
-             .footer-top-icon { 
-               left: 47.2%;
-               top: 4px;
-               width: 6vw;
-               height: 6vh;
-               text-align: $textCenter;
-               display: $flex;
-               align-items: $alignCenter;
-               justify-content: $jcenter;
-               padding: 20px 8px;
-             }
-         } 
-         
-         @include desktop {
-             .footer-top-icon { 
-               left: 47%;
-               top: 15px;
-               padding: 25px 8px;
-               
-             }
-         }   
- 
-         .footer-top-container {
-             height: 50px;
-             display: $flex;
-             justify-content: $between;
-             align-items: $textCenter    ;
-             
-         }
- 
-         @include desktop {
-             .footer-middle-container {
-                 @include gridColumn();
-                 grid-template-columns: repeat(3, 1fr);
-                 background-color: #000;
-                 width: 100%;
-                 font-size: 11px;    
-             }
- 
- 
-             .footer-top-middle,
-             .footer-center-middle {
-                 text-align: $textCenter;
-                 font-weight: $font-weight;
-                 color: $colorWhite;
-                 width: 100%;
-                 @include flexeven();
-                 align-items: $alignCenter;
-                 height: 18vh;  
-             }
+      justify-content: $between;
+      padding: $padding;
+    }
 
-             .middle-adjust {   
-                 width: 100%;   
-             }
-             
-             .middle-adjust-font {
-                 font-size: 11px;
-             }
- 
-             .footer-top-middle-nested {
-                 text-shadow: 0 0 2px #000;
-             }
- 
-             ::placeholder {
-                 font-size: 9px;
-                 text-align: $textCenter;
-                 color: $colorWhite;
-             }
- 
-             .eric {
-                 background-color: #000;
-                 border: 1px solid rgb(80, 72, 72);
-             }
- 
-             .footer-top-middle-nested .send {
-                 width: 4vw;
-                 margin-left: -4.5px;
-                 text-align: $textCenter;
-                 background-color: #444444;
-                 font-weight: $font-weight;
-                 border: 1px solid rgb(80, 72, 72);
-                 
-             }
- 
-             .info-eric {
-                 color: $primaryColor;
-             }
- 
-             .possibility {
-                 color: $primaryColor;
-             }
-         }
- 
-         .footer-bottom-wrapper {
-             @include flexeven();
-             align-items: $textCenter;
-             background-color: $colordkgray;
-             height: 60px;
-         }
- 
-         @include desktop {
-             .footer-bottom-wrapper {
-                 flex-direction: $row;
-                 justify-content: $between;   
-             }
-         }
- 
-         .footer-bottom-icons {
-             @include flexCenter();
-             width: 200px;
-             color: $colorWhite;
-         }
- 
-         @include desktop {
-             .footer-bottom-icons {
-                 width: 30%;
-             } 
-         }
- 
-         .power-container {
-             font-size: 11px;
-             color: $colorWhite;
-             font-weight: $font-weight;
-         }
- 
-         @include desktop {
-             .power-container {
-                width: 50%;
-                display: $flex;
-                justify-content: flex-end;
-                padding-right: 20px;
-             } 
-         }
- 
-     }
- 
+    .top-left-icon .one {
+      color: #e76d6b;
+    }
+
+    .top-left-icon .two {
+      color: #dfbc43;
+    }
+
+    .top-left-icon .three {
+      color: #3dba78;
+    }
+
+    .top-right-icon {
+      color: $topnavgray;
+    }
+
+    .main-middle-icon-container {
+      display: $flex;
+      justify-content: $between;
+      padding: $padding;
+      min-width: 100%;
+    }
+
+    .main-middle-icon-left-wrapper {
+      @include flexCenter();
+
+      min-width: 63%;
+    }
+
+    .middle-left {
+      width: 8%;
+      text-align: $textCenter;
+      background-color: #e6e6e6;
+
+      @include flexCenter();
+
+      border-radius: 2px;
+      padding: 4px 3px;
+    }
+
+    .bk-arrow {
+      color: $darklight;
+    }
+
+    .frt-arrow {
+      color: $topnavgray;
+    }
+
+    .middle-center .plus {
+      width: 4vw;
+      text-align: $textCenter;
+      background-color: $colorWhite;
+      font-size: 11px;
+      padding: 6px;
+      margin-right: -4.5px;
+      color: $topnavgray;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+
+    .middle-center .input-nav {
+      width: 45vw;
+      padding: 3px;
+      border: 0.01px solid $colorWhite;
+    }
+
+    .middle-center .curve-arrow {
+      font-size: 13px;
+      padding: 5px;
+      background-color: $colorWhite;
+      width: 4vw;
+      text-align: $textCenter;
+      margin-left: -5px;
+      color: $topnavgray;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+
+    .main-middle-icon-right-wrapper {
+      @include flexCenter();
+
+      justify-content: $between;
+      width: 36%;
+      margin-right: 5px;
+    }
+
+    .middle-center-2 .fab {
+      text-align: $textCenter;
+      padding: 2px 2px 5px 2px;
+      background-color: $colorWhite;
+      width: 3vw;
+      color: $topnavgray;
+      margin: -3px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    .middle-center-2 .input-nav-2 {
+      width: 29vw;
+      padding: 3px;
+      margin: -2px;
+      border: 0.01px solid $colorWhite;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .middle-right .fas {
+      color: $darklight;
+      padding: 4px;
+      text-align: $textCenter;
+      width: 3vw;
+      border-radius: $border;
+      background-color: #e6e6e6;
+    }
+
+    .main-bottom-navbar {
+      background-color: $primaryColor;
+      height: 8vh;
+      width: 100%;
+
+      @include flexCenter();
+    }
+
+    .main-bottom-navbar a {
+      text-decoration: none;
+    }
+
+    .echantill {
+      width: 10vw;
+    }
+
+    .echantill-icons {
+      width: 40vw;
+      font-size: 12px;
+      font-weight: $font-weight;
+    }
+  }
+
+  .topnav {
+    @include flexCenter();
+
+    max-width: 100%;
+    height: 80px;
+    background-color: $primaryColor;
+    flex-direction: $direction;
+  }
+
+  @include tablet {
+    .topnav {
+      flex-direction: row;
+    }
+  }
+
+  @include desktop {
+    .topnav {
+      display: $none;
+    }
+  }
+
+  .echantill {
+    @include flexCenter();
+
+    min-width: 130px;
+    color: $colorWhite;
+    font-weight: 700;
+  }
+
+  @include tablet {
+    .echantill {
+      min-width: 200px;
+      justify-content: $flexstart;
+    }
+
+    .echantill .fas {
+      padding-right: 4px;
+    }
+  }
+
+  .echantill-icons {
+    @include flexCenter();
+
+    min-width: 200px;
+  }
+
+  ul a {
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 35px;
+  }
+
+  .echantill-icons a {
+    color: $colorWhite;
+  }
+}
+
+main {
+  margin-top: 10px;
+
+  .filter-container {
+    display: $none;
+  }
+
+  @include desktop {
+    .filter-container {
+      display: $flex;
+      flex-direction: $direction;
+      align-items: $alignCenter;
+      justify-content: space-around;
+      height: 15vh;
+      width: 100%;
+    }
+
+    .seach-course {
+      width: 5vw;
+      background-color: $nativeBlue;
+      color: $colorWhite;
+      border: 1px solid  $nativeBlue;
+      padding: 1px;
+      cursor: pointer;
+    }
+
+    .seach-course a {
+      text-decoration: none;
+      color: $colorWhite;
+    }
+
+    .clear-filter .far,
+    .re-fill {
+      color: $colorWhite;
+      background-color: #e5ab5b;
+      font-weight: $font-weight;
+      border: 1px solid #e5ab5b;
+    }
+
+    .clear-filter .far {
+      padding: 0 1px 2.3px 1px;
+    }
+
+    .re-fill {
+      width: 80px;
+      margin-left: -6px;
+      padding: 1px;
+    }
+
+    ::placeholder {
+      color: $colorWhite;
+      text-align: $textCenter;
+    }
+  }
+
+  .search-container {
+    height: 80vh;
+    padding-top: 79px;
+    background-color: $secondaryColor;
+  }
+
+  @include desktop {
+    .search-container {
+      padding-top: 110px;
+    }
+  }
+
+  .result-search {
+    background-color: $mainNav;
+    padding: 10px;
+    color: $colorblack;
+    width: 100vw;
+    text-align: $textCenter;
+    z-index: 3;
+  }
+
+  .courses {
+    height: 60vh;
+    background-color: $secondaryColor;
+  }
+
+  @include tablet {
+    .courses {
+      display: $flex;
+      justify-content: $between;
+      align-items: $alignCenter;
+      height: 60%;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    width: 100vw;
+    text-align: $textCenter;
+  }
+
+  .course-nested a {
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 35px;
+
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+}
+
+footer {
+  min-width: 100%;
+
+  .footer-middle-container {
+    display: $none;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .footer-top-wrapper {
+    position: relative;
+    height: 80px;
+    background-color: #000;
+    padding: 0 20px;
+    min-width: 100%;
+  }
+
+  @include desktop {
+    .footer-top-wrapper {
+      display: $flex;
+      justify-content: $jcenter;
+      align-items: $alignCenter;
+    }
+  }
+
+  .footer-top {
+    position: relative;
+    font-size: 5.5px;
+    display: $flex;
+    justify-content: $between;
+    border-top: 0.1px solid rgb(143, 133, 133);
+    border-bottom: 0.1px solid rgb(143, 133, 133);
+    color: $colorWhite;
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  @include desktop {
+    .footer-top {
+      width: 85vw;
+      font-size: 20px;
+    }
+  }
+
+  @include tablet {
+    .footer-top {
+      font-size: 10px;
+    }
+  }
+
+  .footer-top-icon {
+    color: $colorWhite;
+    position: absolute;
+    left: 47.5%;
+    top: 13px;
+    border: 1px solid rgb(143, 133, 133);
+    border-radius: $border-radius;
+    background-color: $colorblack;
+    padding: 2px 1px 1px 1px;
+    z-index: 5;
+  }
+
+  @include tablet {
+    .footer-top-icon {
+      left: 47.2%;
+      top: 4px;
+      width: 6vw;
+      height: 6vh;
+      text-align: $textCenter;
+      display: $flex;
+      align-items: $alignCenter;
+      justify-content: $jcenter;
+      padding: 20px 8px;
+    }
+  }
+
+  @include desktop {
+    .footer-top-icon {
+      left: 47%;
+      top: 15px;
+      padding: 25px 8px;
+    }
+  }
+
+  .footer-top-container {
+    height: 50px;
+    display: $flex;
+    justify-content: $between;
+    align-items: $textCenter;
+  }
+
+  @include desktop {
+    .footer-middle-container {
+      @include gridColumn();
+
+      grid-template-columns: repeat(3, 1fr);
+      background-color: #000;
+      width: 100%;
+      font-size: 11px;
+    }
+
+    .footer-top-middle,
+    .footer-center-middle {
+      text-align: $textCenter;
+      font-weight: $font-weight;
+      color: $colorWhite;
+      width: 100%;
+
+      @include flexeven();
+
+      align-items: $alignCenter;
+      height: 18vh;
+    }
+
+    .middle-adjust {
+      width: 100%;
+    }
+
+    .middle-adjust-font {
+      font-size: 11px;
+    }
+
+    .footer-top-middle-nested {
+      text-shadow: 0 0 2px #000;
+    }
+
+    ::placeholder {
+      font-size: 9px;
+      text-align: $textCenter;
+      color: $colorWhite;
+    }
+
+    .eric {
+      background-color: #000;
+      border: 1px solid rgb(80, 72, 72);
+    }
+
+    .footer-top-middle-nested .send {
+      width: 4vw;
+      margin-left: -4.5px;
+      text-align: $textCenter;
+      background-color: #444;
+      font-weight: $font-weight;
+      border: 1px solid rgb(80, 72, 72);
+    }
+
+    .info-eric {
+      color: $primaryColor;
+    }
+
+    .possibility {
+      color: $primaryColor;
+    }
+  }
+
+  .footer-bottom-wrapper {
+    @include flexeven();
+
+    align-items: $textCenter;
+    background-color: $colordkgray;
+    height: 60px;
+  }
+
+  @include desktop {
+    .footer-bottom-wrapper {
+      flex-direction: $row;
+      justify-content: $between;
+    }
+  }
+
+  .footer-bottom-icons {
+    @include flexCenter();
+
+    width: 200px;
+    color: $colorWhite;
+  }
+
+  @include desktop {
+    .footer-bottom-icons {
+      width: 30%;
+    }
+  }
+
+  .power-container {
+    font-size: 11px;
+    color: $colorWhite;
+    font-weight: $font-weight;
+  }
+
+  @include desktop {
+    .power-container {
+      width: 50%;
+      display: $flex;
+      justify-content: flex-end;
+      padding-right: 20px;
+    }
+  }
+}

@@ -7,8 +7,9 @@
           box-sizing: border-box;
 }
 
-html, body {
-  font-family: "acumin-pro","Acumin Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+html,
+body {
+  font-family: "acumin-pro", "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 header .fixed-top {
@@ -28,7 +29,7 @@ header .main-navbar {
     display: block;
   }
   header .main-top-navbar {
-    background-color: #D2D2D2;
+    background-color: #d2d2d2;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
@@ -47,13 +48,13 @@ header .main-navbar {
     padding: 5px;
   }
   header .top-left-icon .one {
-    color: #E76D6B;
+    color: #e76d6b;
   }
   header .top-left-icon .two {
-    color: #DFBC43;
+    color: #dfbc43;
   }
   header .top-left-icon .three {
-    color: #3DBA78;
+    color: #3dba78;
   }
   header .top-right-icon {
     color: #969696;
@@ -82,7 +83,7 @@ header .main-navbar {
   header .middle-left {
     width: 8%;
     text-align: center;
-    background-color: #E6E6E6;
+    background-color: #e6e6e6;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -166,10 +167,10 @@ header .main-navbar {
     text-align: center;
     width: 3vw;
     border-radius: 5px;
-    background-color: #E6E6E6;
+    background-color: #e6e6e6;
   }
   header .main-bottom-navbar {
-    background-color: #D35649;
+    background-color: #d35649;
     height: 8vh;
     width: 100%;
     display: -webkit-box;
@@ -205,7 +206,7 @@ header .topnav {
           align-items: center;
   max-width: 100%;
   height: 80px;
-  background-color: #D35649;
+  background-color: #d35649;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -313,7 +314,7 @@ main .echantill-text {
 }
 
 main .form-key {
-  background-color: #C5C2C2;
+  background-color: #c5c2c2;
   min-width: 335px;
   height: 100px;
   display: -webkit-box;
@@ -338,7 +339,7 @@ main .form-key {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border: 1px solid #C5C2C2;
+    border: 1px solid #c5c2c2;
   }
   main .input-wrapper {
     display: -webkit-box;
@@ -360,7 +361,7 @@ main .form-input {
   width: 320px;
   height: 25px;
   background-color: #fff;
-  border: 1px solid #C5C2C2;
+  border: 1px solid #c5c2c2;
   margin-left: 7px;
   border-radius: 3px;
 }
@@ -372,7 +373,7 @@ main .form-input {
 }
 
 main .primarycolor {
-  background-color: #D35649;
+  background-color: #d35649;
   text-align: center;
 }
 
@@ -381,13 +382,13 @@ main .primarycolor {
     width: 70px;
     border-radius: 0;
     margin: -1px;
-    background-color: #519BD7;
+    background-color: #519bd7;
   }
 }
 
 @media (min-width: 1024px) {
   main .primarycolor {
-    background-color: #D35649;
+    background-color: #d35649;
   }
 }
 
@@ -413,7 +414,7 @@ main ::placeholder {
 
 main .key-word {
   margin-left: 7px;
-  font-family: sans-serif Helvetica;
+  font-family: sans-serif, Helvetica;
   font-size: 13px;
   text-shadow: none;
 }
@@ -436,7 +437,7 @@ main .key-word {
 }
 
 main .how-it-works {
-  background-color: #C5C2C2;
+  background-color: #c5c2c2;
   width: 100px;
   text-shadow: none;
   padding: 5px 3px;
@@ -446,7 +447,7 @@ main .four-steps-container h5 {
   height: 40px;
   text-align: center;
   margin-top: 20px;
-  color: #D35649;
+  color: #d35649;
 }
 
 main .four-steps {
@@ -547,7 +548,7 @@ main .admitted-students img {
 main .admitted-students-container,
 main .future,
 main .istock {
-  background-color: #E17E65;
+  background-color: #e17e65;
   color: #fff;
   height: 380px;
   display: -webkit-box;
@@ -652,7 +653,7 @@ main .find-a-course {
 main .course-with-padding {
   padding: 5px;
   background-color: #fff;
-  color: #E17E65;
+  color: #e17e65;
   width: 80px;
   font-size: 10px;
   font-weight: 900;
@@ -660,18 +661,16 @@ main .course-with-padding {
 }
 
 main .future {
-  background-color: #98A4A5;
+  background-color: #98a4a5;
 }
 
 main .future-nest {
-  /*border: 1px solid red;*/
   padding: 5px 5px 5px 20px;
   width: 100%;
 }
 
 @media (min-width: 1024px) {
   main .future-nest {
-    /* border: 1px solid red;*/
     padding: 0;
     width: 50%;
     height: 20vh;
@@ -689,11 +688,11 @@ main .future-nest {
 }
 
 main .free-sign-up {
-  color: #98A4A5;
+  color: #98a4a5;
 }
 
 main .istock {
-  background-color: #519BD7;
+  background-color: #519bd7;
 }
 
 main .platform {
@@ -892,15 +891,15 @@ footer .footer-top-container {
     width: 4vw;
     margin-left: -4.5px;
     text-align: center;
-    background-color: #444444;
+    background-color: #444;
     font-weight: 900;
     border: 1px solid #504848;
   }
   footer .info-eric {
-    color: #D35649;
+    color: #d35649;
   }
   footer .possibility {
-    color: #D35649;
+    color: #d35649;
   }
 }
 
@@ -921,7 +920,7 @@ footer .footer-bottom-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #1F1F1F;
+  background-color: #1f1f1f;
   height: 60px;
 }
 

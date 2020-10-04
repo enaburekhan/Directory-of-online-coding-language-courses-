@@ -34,10 +34,9 @@ This project involves using your initiative to create real life website and maki
 
 ## Show your support
 
-If you've read this far, you must like the project! Give us a ⭐️!
+If you've read this far, you must like the project! Give me a ⭐️!
 
 ## Acknowledgments
 
-- This Project was part of an assignment available on The Odin Project.
 -Many thanks to Mathew Njuguna and others on Behance for the design idea.
 - My thanks also goes to Microverse and all our peers and colleagues there.

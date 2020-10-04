@@ -13,6 +13,8 @@
 
 - Scss
 - Html
+-Flex-box
+-Grid
 
 
 ## Live Demo

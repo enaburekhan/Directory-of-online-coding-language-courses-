@@ -508,28 +508,23 @@ footer .footer-top-container {
 
 @media (min-width: 1024px) {
   footer .footer-middle-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    font-size: 11px;
-    color: #fff;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
     background-color: #000;
+    width: 100%;
+    font-size: 11px;
   }
   footer .footer-top-middle,
   footer .footer-center-middle {
     text-align: center;
     font-weight: 900;
     color: #fff;
-    width: 50%;
-    height: 13vh;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -546,11 +541,10 @@ footer .footer-top-container {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 15vh;
+    height: 18vh;
   }
   footer .middle-adjust {
-    width: 70%;
-    padding-right: 38px;
+    width: 100%;
   }
   footer .middle-adjust-font {
     font-size: 11px;

@@ -372,7 +372,8 @@ $scalapcolor: #4A6786;
            display: $flex;
            flex-direction: $direction;
            justify-content: space-evenly;
-           width: 40vw;  
+           width: 40%; 
+           align-items: $alignCenter; 
        }
 
        .register-form-container {
@@ -380,28 +381,40 @@ $scalapcolor: #4A6786;
            display: $flex;
            justify-content: $jcenter;
            /*align-items: $alignCenter;*/
-           height: 55vh;
+           /*height: 40vh;*/
+           width: 100%;
        }
 
        .sign-up {
            display: $flex;
            align-items: $alignCenter;
+           justify-content: $jcenter;
+           /*text-align: $textCenter;*/
+           /*border: 1px solid black;*/
+           width: 100px;
+           
        }
 
        .sign-up button {
            /*border: 1px solid hotpink;*/
-           width: 70px;
+           width: 20vw;
            font-size: 11px;
            background-color: $primaryColor;
            color: $colorWhite;
            padding: 2px 0;
            margin-right: 4px;
            border: 1px solid $primaryColor;
+           cursor: pointer;
+           text-align: $textCenter;
+           
+           
        }
 
        .sign-up p {
            font-size: 10px;
            color: #60b331;
+           cursor: pointer;
+           width: 10vw;
        }
 
        /*.map-directons {

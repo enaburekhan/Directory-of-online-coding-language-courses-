@@ -396,7 +396,10 @@ main .register-form {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 40vw;
+  width: 40%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .register-form-container {
@@ -408,7 +411,8 @@ main .register-form-container {
       -ms-flex-pack: center;
           justify-content: center;
   /*align-items: $alignCenter;*/
-  height: 55vh;
+  /*height: 40vh;*/
+  width: 100%;
 }
 
 main .sign-up {
@@ -418,22 +422,32 @@ main .sign-up {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*text-align: $textCenter;*/
+  /*border: 1px solid black;*/
+  width: 100px;
 }
 
 main .sign-up button {
   /*border: 1px solid hotpink;*/
-  width: 70px;
+  width: 20vw;
   font-size: 11px;
   background-color: #D35649;
   color: #fff;
   padding: 2px 0;
   margin-right: 4px;
   border: 1px solid #D35649;
+  cursor: pointer;
+  text-align: center;
 }
 
 main .sign-up p {
   font-size: 10px;
   color: #60b331;
+  cursor: pointer;
+  width: 10vw;
 }
 
 footer {

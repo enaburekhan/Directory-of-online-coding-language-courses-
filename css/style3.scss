@@ -312,20 +312,15 @@ main {
   padding: 20px;
 
   @include desktop {
-    margin-top: 100px;
+    margin-top: 50px;
   }
 
   .scala-container {
     @include flexeven();
-
-    /* border: 1px solid red; */
-    height: 14vh;
-
-    /* padding: 20px; */
+    height: 14vh;  
   }
 
   .scala img {
-    /* border: 1px solid purple; */
     width: 30px;
   }
 
@@ -359,8 +354,6 @@ main {
   .click-details {
     display: $flex;
     justify-content: $jcenter;
-
-    /* border: 1px solid black; */
     align-items: $alignCenter;
     text-align: $textCenter;
     height: 7vh;
@@ -378,7 +371,6 @@ main {
   }
 
   .scala-text-container {
-    /* border: 1px solid purple; */
     min-height: 40vh;
     width: 100%;
   }
@@ -386,8 +378,6 @@ main {
   .register-form {
     font-size: 13px;
     height: 40vh;
-
-    /* border: 1px solid red; */
     display: $flex;
     flex-direction: $direction;
     justify-content: space-evenly;
@@ -396,13 +386,8 @@ main {
   }
 
   .register-form-container {
-    /* border: 1px solid black; */
     display: $flex;
     justify-content: $jcenter;
-
-    /* align-items: $alignCenter; */
-
-    /* height: 40vh; */
     width: 100%;
   }
 
@@ -410,15 +395,10 @@ main {
     display: $flex;
     align-items: $alignCenter;
     justify-content: $jcenter;
-
-    /* text-align: $textCenter; */
-
-    /* border: 1px solid black; */
     width: 100px;
   }
 
   .sign-up button {
-    /* border: 1px solid hotpink; */
     width: 20vw;
     font-size: 11px;
     background-color: $primaryColor;
@@ -450,8 +430,6 @@ main {
       display: $flex;
       align-items: $alignCenter;
       justify-content: $jcenter;
-
-      /* border: 1px solid hotpink; */
       height: 10vh;
     }
 

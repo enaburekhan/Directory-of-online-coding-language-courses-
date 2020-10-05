@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Directory of online coding language courses</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/style2.css"/>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,43 +15,9 @@
       <nav class="fixed-top">
 
       <div class="main-navbar">
-        <div class="main-top-navbar">
-            <div class="main-top-icon-container">
-              <div class="top-left-icon">
-                <i class='one fas'>&#xf111;</i>
-                <i class='two fas'>&#xf111;</i>
-                <i class='three fas'>&#xf111;</i>
-              </div>
-              <div class="top-right-icon">
-                <i class='fas'>&#xf424;</i>
-              </div>
-            </div>
-            <div class="main-middle-icon-container">
-                <div class="main-middle-icon-left-wrapper">
-                    <div class="middle-left">
-                      <i class='bk-arrow fas'>&#xf0d9;</i>
-                      <i class='frt-arrow fas'>&#xf0da;</i>
-                    </div>
-                    <div class="middle-center">
-                        <i class='plus fas'>&#xf067;</i>
-                        <input type="text" class="input-nav" placeholder=""/>
-                        <i class='curve-arrow fas'>&#xf01e;</i>
-                    </div>
-                </div>
-                <div class="main-middle-icon-right-wrapper">
-                    <div class="middle-center-2">
-                      <a href="#"><i class='fab'>&#xf3ee;</i></a>
-                      <input type="text" class="input-nav-2" placeholder=""/>
-                    </div>
-                    <div class="middle-right">
-                      <i class='fas'>&#xf111;</i>
-                    </div>
-                </div>
-           </div>
-         </div> 
           <div class="main-bottom-navbar">
             <div class="echantill">
-              <a href="index.html"><i class='fas'>&#xf19d;</i></a>
+              <a href="index.html"><i class='fas'>&#xf19d;</i></a> 
               <h4>Echantill-edu</h4>
             </div>
             <div class="echantill-icons">
@@ -86,7 +54,7 @@
     </header>
     <main>
        
-        <section class="search-container">
+        <!--<section class="search-container">-->
             <section class="filter-container">
                 <h1>Filter By language, level, course, duration and skills. </h1>
                 <form>
@@ -134,26 +102,45 @@
                      </span> 
                 </form>
              </section>
-            <div class="courses">
-                <ul class="course-nested">
-                    <li><a href="#">Html</a></li>
-                    <li><a href="#">Css</a></li>
-                    <li><a href="#">Ruby</a></li>
-                    <li><a href="#">Ruby on Rails</a></li>
-                    <li><a href="#">Vanilla Javascript</a></li>
-                    <li><a href="#">React</a></li>
-                </ul>
-                <ul class="course-nested">
-                    <li><a href="#">Redux</a></li>
-                    <li><a href="#">Python</a></li>
-                    <li><a href="detail.html">Scala</a></li>
-                    <li><a href="#">Java</a></li>
-                    <li><a href="#">Haskell</a></li>
-                    <li><a href="#">C#</a></li>
-                </ul>
-            </div>
+           <section>
+             <h6 class="result-search">Showing 12 results for available related courses</h6>
+             <div class="courses-nested-wrapper">
+                <div class="course-nested-container">
+                  <ul class="course-nested">
+                     <li><a href="#">Html</a></li>
+                      <li> <a href="#">Css</a></li>
+                      <li><a href="#">Ruby</a></li>
+                      <li><a href="#">Ruby on Rails</a></li>
+                  </ul>  
+                    <div class="bg-grad">
+                      <img class="" src="../images/grad3.jpg" alt="images of graduation cap"/>
+                    </div>
+                </div> 
+                <div class="course-nested-container">
+                  <ul class="course-nested course-top-1">
+                     <li><a href="#">Vanilla Javascript</a></li>
+                      <li> <a href="#">React</a></li>
+                      <li><a href="#">Redux</a></li>
+                      <li><a href="#">Python</a></li>
+                  </ul>  
+                    <div class="bg-grad">
+                      <img class="" src="../images/grad3.jpg" alt="images of graduation cap"/>
+                    </div>
+                </div>
+                <div class="course-nested-container">
+                  <ul class="course-nested course-top-2">
+                     <li><a href="detail.html">Scala</a></li>
+                      <li> <a href="#">Java</a></li>
+                      <li><a href="#">Haskel</a></li>
+                      <li><a href="#">C#</a></li>
+                  </ul>  
+                    <div class="bg-grad">
+                      <img class="" src="../images/grad3.jpg" alt="images of graduation cap"/>
+                    </div>
+                </div>
+              </div>
+            </section>
 
-        </section>
     </main>
 
     <footer>
@@ -224,5 +211,15 @@
           </div> 
       </div>  
 </footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+crossorigin="anonymous"></script>
 </body>
 </html>

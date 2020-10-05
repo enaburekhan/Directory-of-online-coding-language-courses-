@@ -54,6 +54,14 @@ $desktop: 1024px;
   }
 }
 
+$desktop-lg: 1131px;
+
+@mixin desktop-lg {
+  @media (min-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
 $primaryColor: #d35649;
 $secondaryColor: #eee;
 $direction: column;
@@ -257,7 +265,6 @@ header {
 
   .topnav {
     @include flexCenter();
-
     max-width: 100%;
     height: 80px;
     background-color: $primaryColor;
@@ -278,10 +285,13 @@ header {
 
   .echantill {
     @include flexCenter();
-
     min-width: 130px;
     color: $colorWhite;
     font-weight: 700;
+  }
+
+  .echantill a {
+    color: $colorWhite;
   }
 
   @include tablet {
@@ -292,6 +302,7 @@ header {
 
     .echantill .fas {
       padding-right: 4px;
+  
     }
   }
 
@@ -313,7 +324,8 @@ header {
 }
 
 main {
-  margin-top: 10px;
+  margin-top: 80px;
+  /*background-color: #111;*/
 
   .filter-container {
     display: $none;
@@ -352,7 +364,7 @@ main {
     }
 
     .clear-filter .far {
-      padding: 0 1px 2.3px 1px;
+      padding: 2.5px 1px 7px 1px;
     }
 
     .re-fill {
@@ -379,15 +391,6 @@ main {
     }
   }
 
-  .result-search {
-    background-color: $mainNav;
-    padding: 10px;
-    color: $colorblack;
-    width: 100vw;
-    text-align: $textCenter;
-    z-index: 3;
-  }
-
   .courses {
     height: 60vh;
     background-color: $secondaryColor;
@@ -402,26 +405,140 @@ main {
     }
   }
 
-  ul {
-    list-style-type: none;
+  .result-search {
+    background-color: $mainNav;
+    padding: 10px;
+    color: $colorblack;
     width: 100vw;
     text-align: $textCenter;
+    z-index: 3;
+  }
+
+  .bg-grad img {
+    width: 200px;
+    height: 200px;
+    color: $primaryColor;
+    background-color: $primaryColor;
+    /*border: 1px solid red;*/
+    margin-bottom: 5px;
+   
+
+  }
+
+  .courses-nested-wrapper {
+    /*border: 1px solid red;*/
+    height: 600px;
+    /*z-index: 5;*/
+    display: $flex;
+    flex-direction: $direction;
+    align-items: $alignCenter;
+    width: 100%;
+  }
+
+  @include desktop {
+    .courses-nested-wrapper {
+     flex-direction: $row;
+     justify-content: $jcenter;
+     height: 400px;
+     
+      /*border: 1px solid red;*/
+    }
+
+    .course-nested-container {
+      /*border: 1px solid purple;*/
+      width: 220px;
+    }
+  }
+
+  .course-nested  {
+    position: absolute;
+    /*border: 1px solid hotpink;*/
+    bottom: 350px;
+    left: 40%; 
+    width: 50%;
+  }
+
+  @include tablet {
+    .course-nested  {
+      left: 45%; 
+      width: 40%;
+      /*border: 1px solid white;*/
+    }
+  }
+
+  @include desktop {
+    .course-nested {
+      left: 10%;
+      bottom: 150px;
+      text-align: $textCenter;
+    }
+  }
+
+  @include desktop-lg {
+    .course-nested {
+      left: 14%;
+      bottom: 200px;
+    }
+  }
+
+  .course-top-1 {
+    bottom: 150px;
+
+  }
+
+  @include desktop {
+    .course-top-1 {
+      left: 28%;
+      text-align: $textCenter;
+    }
+  }
+
+  @include desktop-lg {
+    .course-top-1 {
+      left: 29%;
+      bottom: 200px;
+    }
+  }
+
+  .course-top-2 {
+    bottom: -60px;
+  }
+
+  @include desktop {
+    .course-top-2 {
+      bottom: 150px;
+      left: 47%;
+      /*border: 1px solid red;*/
+      text-align: $textCenter;
+    }
+  }
+
+  @include desktop-lg {
+    .course-top-2 {
+      bottom: 200px;
+      left: 43%;
+    }
   }
 
   .course-nested a {
-    text-decoration: none;
-    font-size: 20px;
-    line-height: 35px;
-
-    &:hover {
-      color: $primaryColor;
-    }
+    color: $colorWhite;
+    /*border: 1px solid $colorWhite;*/
+    font-weight: $font-weight;
+    font-size: 16px;
+    
   }
+
+  ul {
+    list-style-type: $none;
+  }
+ 
 }
 
 footer {
   min-width: 100%;
-
+  margin-top: 20px;
+  background-color: $colordkgray;
+ 
   .footer-middle-container {
     display: $none;
   }
@@ -436,6 +553,10 @@ footer {
     background-color: #000;
     padding: 0 20px;
     min-width: 100%;
+    z-index: 100;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    /*border: 1px solid red;*/
   }
 
   @include desktop {
@@ -443,12 +564,14 @@ footer {
       display: $flex;
       justify-content: $jcenter;
       align-items: $alignCenter;
+      margin-bottom: 0;
+      /*border: 1px solid red;*/
     }
   }
 
   .footer-top {
     position: relative;
-    font-size: 5.5px;
+    font-size: 6px;
     display: $flex;
     justify-content: $between;
     border-top: 0.1px solid rgb(143, 133, 133);
@@ -456,26 +579,30 @@ footer {
     color: $colorWhite;
     width: 100%;
     padding: 5px 0;
+    /*border: 1px solid purple;*/
+  }
+
+  @include tablet {
+    .footer-top {
+      font-size: 9px;
+      /*border: 1px solid red;*/
+    }
   }
 
   @include desktop {
     .footer-top {
       width: 85vw;
-      font-size: 20px;
-    }
-  }
-
-  @include tablet {
-    .footer-top {
       font-size: 10px;
     }
   }
+
+  
 
   .footer-top-icon {
     color: $colorWhite;
     position: absolute;
     left: 47.5%;
-    top: 13px;
+    top:  12px;
     border: 1px solid rgb(143, 133, 133);
     border-radius: $border-radius;
     background-color: $colorblack;
@@ -500,8 +627,9 @@ footer {
   @include desktop {
     .footer-top-icon {
       left: 47%;
-      top: 15px;
+      top: 5px;
       padding: 25px 8px;
+      /*border: 1px solid purple;*/
     }
   }
 
@@ -582,6 +710,15 @@ footer {
     align-items: $textCenter;
     background-color: $colordkgray;
     height: 60px;
+    width: 100%;
+   /* border: 1px solid hotpink;*/
+  }
+
+  @include tablet {
+    .footer-bottom-wrapper {
+      z-index: 13;
+      height: 75px;
+    }
   }
 
   @include desktop {
@@ -593,9 +730,20 @@ footer {
 
   .footer-bottom-icons {
     @include flexCenter();
-
-    width: 200px;
+    /*justify-content: $jcenter;*/
+    width: 50%; 
+    height: 3vh;
     color: $colorWhite;
+    font-size: 10px;
+    /*border: 1px solid brown;*/
+    background-color: $colordkgray;
+  }
+
+  @include tablet {
+    .footer-bottom-icons {
+      width: 40%; 
+      
+    }
   }
 
   @include desktop {

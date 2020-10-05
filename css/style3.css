@@ -280,7 +280,7 @@ main {
 
 @media (min-width: 1024px) {
   main {
-    margin-top: 100px;
+    margin-top: 50px;
   }
 }
 
@@ -298,13 +298,10 @@ main .scala-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  /* border: 1px solid red; */
   height: 14vh;
-  /* padding: 20px; */
 }
 
 main .scala img {
-  /* border: 1px solid purple; */
   width: 30px;
 }
 
@@ -350,7 +347,6 @@ main .click-details {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /* border: 1px solid black; */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -370,7 +366,6 @@ main .click-details p {
 }
 
 main .scala-text-container {
-  /* border: 1px solid purple; */
   min-height: 40vh;
   width: 100%;
 }
@@ -378,7 +373,6 @@ main .scala-text-container {
 main .register-form {
   font-size: 13px;
   height: 40vh;
-  /* border: 1px solid red; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,15 +390,12 @@ main .register-form {
 }
 
 main .register-form-container {
-  /* border: 1px solid black; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /* align-items: $alignCenter; */
-  /* height: 40vh; */
   width: 100%;
 }
 
@@ -418,13 +409,10 @@ main .sign-up {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /* text-align: $textCenter; */
-  /* border: 1px solid black; */
   width: 100px;
 }
 
 main .sign-up button {
-  /* border: 1px solid hotpink; */
   width: 20vw;
   font-size: 11px;
   background-color: #d35649;
@@ -461,7 +449,6 @@ main .map-directions-container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    /* border: 1px solid hotpink; */
     height: 10vh;
   }
   main .map-directons .fas,

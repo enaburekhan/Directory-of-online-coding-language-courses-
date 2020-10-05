@@ -281,6 +281,10 @@ header {
     font-weight: 700;
   }
 
+  .echantill a {
+      color: $colorWhite;
+  }
+
   @include tablet {
     .echantill {
       min-width: 200px;

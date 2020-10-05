@@ -188,6 +188,9 @@ header .main-navbar {
   header .echantill {
     width: 10vw;
   }
+  header .echantill a {
+    color: #fff;
+  }
   header .echantill-icons {
     width: 40vw;
     font-size: 12px;
@@ -354,7 +357,28 @@ main .form-key {
 
 main .bg-img {
   width: 100%;
-  height: 400px;
+  height: 500px;
+  background-size: auto;
+}
+
+main .bg-img-2 {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  main .bg-img {
+    background: url(main.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+}
+
+@media (min-width: 1179px) {
+  main .bg-img-2 {
+    background: url(main3.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
 }
 
 main .form-input {

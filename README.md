@@ -18,9 +18,9 @@
 
 
 ## Live Demo
-https://www.loom.com/share/6be0243ac6ff4c5eb1c17ddec4a729e9
 
-[Live Demo Link](https://raw.githack.com/enaburekhan/Directory-of-online-coding-language-courses-/feature-onlineCoding/html/index.html)
+
+[Live Demo Link](https://www.loom.com/share/6be0243ac6ff4c5eb1c17ddec4a729e9)
 
 
 ## Getting Started
@@ -41,5 +41,5 @@ If you've read this far, you must like the project! Give me a ⭐️!
 
 ## Acknowledgments
 
--Many thanks to Mathew Njuguna and others on Behance for the design idea.
+-Many thanks to Mathew Njuguna and others on Behance for the design idea https://www.behance.net/mathewnjuguna.
 - My thanks also goes to Microverse and all our peers and colleagues there.

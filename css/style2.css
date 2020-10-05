@@ -187,6 +187,9 @@ header .main-navbar {
   header .echantill {
     width: 10vw;
   }
+  header .echantill a {
+    color: #fff;
+  }
   header .echantill-icons {
     width: 40vw;
     font-size: 12px;

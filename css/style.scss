@@ -375,24 +375,20 @@ main {
     display: $none;
   }
 
-  
-
   @include desktop {
     .bg-img {
-    background: url(main.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
-  }
-
+      background: url(main.jpg);
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
   }
 
   @include desktop-lg {
     .bg-img-2 {
-    background: url(main3.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
-  }
-
+      background: url(main3.jpg);
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
   }
 
   .form-input {

@@ -6,7 +6,7 @@
 
 
 
-![onlineCodingDirectory-screen-shot](https://user-images.githubusercontent.com/51296741/95023564-a25ee380-0675-11eb-9734-0b94d51cb35d.png)
+![onlineCodingDirectory-screen-shot](https://user-images.githubusercontent.com/51296741/95068907-dda4f500-06fd-11eb-8e0f-36629e7ecaa5.png)
 
 
 ## Built With

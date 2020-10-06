@@ -450,6 +450,7 @@ main .course-nested {
   main .course-nested {
     left: 45%;
     width: 40%;
+    bottom: 390px;
     /*border: 1px solid white;*/
   }
 }
@@ -457,7 +458,7 @@ main .course-nested {
 @media (min-width: 1024px) {
   main .course-nested {
     left: 10%;
-    bottom: 150px;
+    bottom: 175px;
     text-align: center;
   }
 }
@@ -465,7 +466,7 @@ main .course-nested {
 @media (min-width: 1131px) {
   main .course-nested {
     left: 14%;
-    bottom: 200px;
+    bottom: 250px;
   }
 }
 
@@ -473,22 +474,35 @@ main .course-top-1 {
   bottom: 150px;
 }
 
+@media (min-width: 769px) {
+  main .course-top-1 {
+    bottom: 180px;
+  }
+}
+
 @media (min-width: 1024px) {
   main .course-top-1 {
     left: 28%;
     text-align: center;
+    bottom: 173px;
   }
 }
 
 @media (min-width: 1131px) {
   main .course-top-1 {
     left: 29%;
-    bottom: 200px;
+    bottom: 250px;
   }
 }
 
 main .course-top-2 {
   bottom: -60px;
+}
+
+@media (min-width: 769px) {
+  main .course-top-2 {
+    bottom: -10px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -497,12 +511,13 @@ main .course-top-2 {
     left: 47%;
     /*border: 1px solid red;*/
     text-align: center;
+    bottom: 173px;
   }
 }
 
 @media (min-width: 1131px) {
   main .course-top-2 {
-    bottom: 200px;
+    bottom: 250px;
     left: 43%;
   }
 }

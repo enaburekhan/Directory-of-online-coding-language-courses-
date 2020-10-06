@@ -462,6 +462,7 @@ main {
     .course-nested  {
       left: 45%; 
       width: 40%;
+      bottom: 390px;
       /*border: 1px solid white;*/
     }
   }
@@ -469,7 +470,7 @@ main {
   @include desktop {
     .course-nested {
       left: 10%;
-      bottom: 150px;
+      bottom: 175px;
       text-align: $textCenter;
     }
   }
@@ -477,7 +478,7 @@ main {
   @include desktop-lg {
     .course-nested {
       left: 14%;
-      bottom: 200px;
+      bottom: 250px;
     }
   }
 
@@ -486,22 +487,37 @@ main {
 
   }
 
+  @include tablet {
+    .course-top-1 {
+      bottom: 180px;
+  
+    }
+  }
+
   @include desktop {
     .course-top-1 {
       left: 28%;
       text-align: $textCenter;
+      bottom: 173px;
     }
   }
 
   @include desktop-lg {
     .course-top-1 {
       left: 29%;
-      bottom: 200px;
+      bottom: 250px;
     }
   }
 
   .course-top-2 {
     bottom: -60px;
+  }
+
+  @include tablet {
+    .course-top-2 {
+      bottom: -10px;
+  
+    }
   }
 
   @include desktop {
@@ -510,12 +526,13 @@ main {
       left: 47%;
       /*border: 1px solid red;*/
       text-align: $textCenter;
+      bottom: 173px;
     }
   }
 
   @include desktop-lg {
     .course-top-2 {
-      bottom: 200px;
+      bottom: 250px;
       left: 43%;
     }
   }

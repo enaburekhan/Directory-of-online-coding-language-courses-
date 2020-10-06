@@ -274,7 +274,7 @@ header .echantill-icons a {
 }
 
 main {
-  margin-top: 55px;
+  margin-top: 50px;
 }
 
 main .echantill-edu-container {
@@ -357,8 +357,10 @@ main .form-key {
 
 main .bg-img {
   width: 100%;
-  height: 500px;
+  height: 100%;
   background-size: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main .bg-img-2 {

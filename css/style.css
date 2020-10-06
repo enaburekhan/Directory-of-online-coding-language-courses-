@@ -407,7 +407,7 @@ main .change {
           align-items: center;
 }
 
-main a {
+main .change-a a {
   text-decoration: none;
   text-shadow: none;
 }

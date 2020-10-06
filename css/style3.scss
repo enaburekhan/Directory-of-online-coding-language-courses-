@@ -54,6 +54,14 @@ $desktop: 1024px;
   }
 }
 
+$desktop-lg: 1131px;
+
+@mixin desktop-lg {
+  @media (min-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
 $primaryColor: #d35649;
 $secondaryColor: #eee;
 $direction: column;
@@ -310,14 +318,30 @@ header {
 main {
   margin-top: 65px;
   padding: 20px;
+  
+  .scala-table-large {
+    display: $none;
+  }
+
+  .scala-text-lg {
+    display: $none;
+  }
 
   @include desktop {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 
   .scala-container {
     @include flexeven();
-    height: 14vh;  
+    height: 14vh; 
+    padding-top: 25px; 
+  }
+
+  @include tablet {
+    .scala-container {
+       
+      padding-top: 15px; 
+    }
   }
 
   .scala img {
@@ -338,6 +362,119 @@ main {
   .language {
     color: $topnavgray;
     font-weight: $font-weight;
+  }
+
+  .scala-wrapper-grand {
+    /*border: 1px solid purple;*/
+    display: $flex;
+    justify-content: $jcenter;
+    
+  }
+
+  .scala-wrapper {
+    border: 3px solid #c4bebe;
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: space-around;
+    height: 450px;
+    width: 70%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-top: 100px;
+  }
+
+  .scala-table, th {
+    border: 1px solid #c4bebe;
+    color: rgb(90, 85, 85);
+  }
+
+  @include desktop {
+    .scala-table {
+      display: none;
+    }
+
+    .scala-table-large {
+      display: block;
+    }
+
+    .scala-wrapper {
+      display: $flex;
+      flex-direction: $direction;
+      justify-content: space-around;
+      height: 450px;
+      width: 50%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      padding-top: 30px;
+      align-items: $alignCenter;
+      border: 3px solid #c4bebe;
+    }
+
+    .scala-container {
+      align-items: $flexstart;
+      width: 47vw;
+      /*border: 1px solid red;*/
+      padding-top: 35px;
+      /*margin-left: 20px;*/ 
+      
+    }
+
+    .scala-text-lg {
+      display: block;
+      color: $topnavgray;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: $font-weight-700;
+    }
+  }
+
+  @include desktop-lg {
+   .scala-wrapper {
+    width: 50vw;
+   }
+
+   .scala-container {
+    width: 32vw; 
+  }
+  }
+
+  .scala-apply {
+    /*border: 1px solid red;*/
+    display: $flex;
+    justify-content: flex-end;
+    max-width: 60vw;
+  }
+
+  @include desktop {
+    .scala-apply {
+      /*border: 1px solid red;*/
+      width: 47vw;
+    }
+  }
+
+  @include desktop-lg {
+    .scala-apply {
+      width: 31.6vw;
+    }
+  }
+
+  .scala-apply .fas,
+  .scala-apply button {
+    padding: 2px;
+    color: $colorWhite;
+    background-color: $nativeBlue;
+    border: 1px solid $nativeBlue;
+    cursor: pointer;
+  } 
+
+  .scala-apply button {
+    padding: 1px;
+  }
+
+  .scala-text-container {
+    /*border: 1px solid hotpink;*/
+    height: 20vh;
+    min-width: 200px;
   }
 
   .scala-text {
@@ -383,6 +520,7 @@ main {
     justify-content: space-evenly;
     width: 40%;
     align-items: $alignCenter;
+    margin: 40px 0;
   }
 
   .register-form-container {
@@ -391,7 +529,20 @@ main {
     width: 100%;
   }
 
-  .sign-up {
+  .register-margin {
+    margin-bottom: 10px;
+  }
+
+  .fill-in-credentials {
+    /*border: 1px solid red;*/
+    height: 5vh;
+    width: 40vw;
+    padding: 5px;
+    background-color: #DFE2E3;
+    border: 1px solid #DFE2E3;
+  }
+
+    .sign-up {
     display: $flex;
     align-items: $alignCenter;
     justify-content: $jcenter;
@@ -516,7 +667,7 @@ footer {
   @include tablet {
     .footer-top-icon {
       left: 47.2%;
-      top: 4px;
+      top: 2px;
       width: 6vw;
       height: 6vh;
       text-align: $textCenter;

@@ -278,9 +278,17 @@ main {
   padding: 20px;
 }
 
+main .scala-table-large {
+  display: none;
+}
+
+main .scala-text-lg {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   main {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 }
 
@@ -299,6 +307,13 @@ main .scala-container {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 14vh;
+  padding-top: 25px;
+}
+
+@media (min-width: 769px) {
+  main .scala-container {
+    padding-top: 15px;
+  }
 }
 
 main .scala img {
@@ -327,6 +342,136 @@ main .scala p {
 main .language {
   color: #969696;
   font-weight: 900;
+}
+
+main .scala-wrapper-grand {
+  /*border: 1px solid purple;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .scala-wrapper {
+  border: 3px solid #c4bebe;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 450px;
+  width: 70%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-top: 100px;
+}
+
+main .scala-table, main th {
+  border: 1px solid #c4bebe;
+  color: #5a5555;
+}
+
+@media (min-width: 1024px) {
+  main .scala-table {
+    display: none;
+  }
+  main .scala-table-large {
+    display: block;
+  }
+  main .scala-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 450px;
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 3px solid #c4bebe;
+  }
+  main .scala-container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 47vw;
+    /*border: 1px solid red;*/
+    padding-top: 35px;
+    /*margin-left: 20px;*/
+  }
+  main .scala-text-lg {
+    display: block;
+    color: #969696;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 1131px) {
+  main .scala-wrapper {
+    width: 50vw;
+  }
+  main .scala-container {
+    width: 32vw;
+  }
+}
+
+main .scala-apply {
+  /*border: 1px solid red;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  max-width: 60vw;
+}
+
+@media (min-width: 1024px) {
+  main .scala-apply {
+    /*border: 1px solid red;*/
+    width: 47vw;
+  }
+}
+
+@media (min-width: 1131px) {
+  main .scala-apply {
+    width: 31.6vw;
+  }
+}
+
+main .scala-apply .fas,
+main .scala-apply button {
+  padding: 2px;
+  color: #fff;
+  background-color: #519bd7;
+  border: 1px solid #519bd7;
+  cursor: pointer;
+}
+
+main .scala-apply button {
+  padding: 1px;
+}
+
+main .scala-text-container {
+  /*border: 1px solid hotpink;*/
+  height: 20vh;
+  min-width: 200px;
 }
 
 main .scala-text {
@@ -387,6 +532,7 @@ main .register-form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 40px 0;
 }
 
 main .register-form-container {
@@ -397,6 +543,19 @@ main .register-form-container {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+}
+
+main .register-margin {
+  margin-bottom: 10px;
+}
+
+main .fill-in-credentials {
+  /*border: 1px solid red;*/
+  height: 5vh;
+  width: 40vw;
+  padding: 5px;
+  background-color: #DFE2E3;
+  border: 1px solid #DFE2E3;
 }
 
 main .sign-up {
@@ -542,7 +701,7 @@ footer .footer-top-icon {
 @media (min-width: 769px) {
   footer .footer-top-icon {
     left: 47.2%;
-    top: 4px;
+    top: 2px;
     width: 6vw;
     height: 6vh;
     text-align: center;

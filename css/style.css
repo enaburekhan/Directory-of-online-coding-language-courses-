@@ -275,6 +275,13 @@ header .echantill-icons a {
 
 main {
   margin-top: 50px;
+  /*@include desktop-lg {
+    .bg-img-2 {
+      background: url(main3.jpg);
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
+  }*/
 }
 
 main .echantill-edu-container {
@@ -356,9 +363,9 @@ main .form-key {
 }
 
 main .bg-img {
-  width: 100%;
-  height: 100%;
-  background-size: auto;
+  width: auto;
+  height: auto;
+  /*background-size: auto;*/
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -372,14 +379,7 @@ main .bg-img-2 {
     background: url(main.jpg);
     background-repeat: no-repeat;
     background-size: auto;
-  }
-}
-
-@media (min-width: 1179px) {
-  main .bg-img-2 {
-    background: url(main3.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
+    width: 100%;
   }
 }
 
@@ -787,7 +787,7 @@ footer .footer-top-wrapper {
 
 footer .footer-top {
   position: relative;
-  font-size: 5px;
+  font-size: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -817,7 +817,7 @@ footer .footer-top {
 footer .footer-top-icon {
   color: #fff;
   position: absolute;
-  left: 47.5%;
+  left: 48.5%;
   top: 13px;
   border: 1px solid #8f8585;
   border-radius: 50%;

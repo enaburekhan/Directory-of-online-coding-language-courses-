@@ -561,7 +561,9 @@ main {
 
   @include tablet {
     .map-directions-container {
-      display: block;
+      display: $flex;
+      flex-direction: $direction;
+      align-items: $alignCenter;
       margin-bottom: 20px;
     }
 
@@ -583,7 +585,8 @@ main {
     }
 
     .google-img {
-      width: 100%;
+      width: auto;
+      height: auto; 
     }
   }
 }

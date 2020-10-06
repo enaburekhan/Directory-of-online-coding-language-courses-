@@ -585,7 +585,16 @@ main .map-directions-container {
 
 @media (min-width: 769px) {
   main .map-directions-container {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 20px;
   }
   main .map-directons {
@@ -609,7 +618,8 @@ main .map-directions-container {
     padding-left: 1px;
   }
   main .google-img {
-    width: 100%;
+    width: auto;
+    height: auto;
   }
 }
 

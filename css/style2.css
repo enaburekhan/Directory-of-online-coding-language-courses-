@@ -244,6 +244,12 @@ header .echantill {
   font-weight: 700;
 }
 
+header ul a {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 35px;
+}
+
 header .echantill a {
   color: #fff;
 }
@@ -272,19 +278,12 @@ header .echantill-icons {
   min-width: 200px;
 }
 
-header ul a {
-  text-decoration: none;
-  font-size: 20px;
-  line-height: 35px;
-}
-
 header .echantill-icons a {
   color: #fff;
 }
 
 main {
   margin-top: 80px;
-  /*background-color: #111;*/
 }
 
 main .filter-container {
@@ -399,14 +398,11 @@ main .bg-grad img {
   height: 200px;
   color: #d35649;
   background-color: #d35649;
-  /*border: 1px solid red;*/
   margin-bottom: 5px;
 }
 
 main .courses-nested-wrapper {
-  /*border: 1px solid red;*/
   height: 600px;
-  /*z-index: 5;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,17 +426,14 @@ main .courses-nested-wrapper {
         -ms-flex-pack: center;
             justify-content: center;
     height: 400px;
-    /*border: 1px solid red;*/
   }
   main .course-nested-container {
-    /*border: 1px solid purple;*/
     width: 220px;
   }
 }
 
 main .course-nested {
   position: absolute;
-  /*border: 1px solid hotpink;*/
   bottom: 350px;
   left: 40%;
   width: 50%;
@@ -451,7 +444,6 @@ main .course-nested {
     left: 45%;
     width: 40%;
     bottom: 390px;
-    /*border: 1px solid white;*/
   }
 }
 
@@ -507,9 +499,7 @@ main .course-top-2 {
 
 @media (min-width: 1024px) {
   main .course-top-2 {
-    bottom: 150px;
     left: 47%;
-    /*border: 1px solid red;*/
     text-align: center;
     bottom: 173px;
   }
@@ -524,7 +514,6 @@ main .course-top-2 {
 
 main .course-nested a {
   color: #fff;
-  /*border: 1px solid $colorWhite;*/
   font-weight: 900;
   font-size: 16px;
 }
@@ -556,7 +545,6 @@ footer .footer-top-wrapper {
   z-index: 100;
   margin-bottom: 10px;
   padding-top: 10px;
-  /*border: 1px solid red;*/
 }
 
 @media (min-width: 1024px) {
@@ -571,7 +559,6 @@ footer .footer-top-wrapper {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 0;
-    /*border: 1px solid red;*/
   }
 }
 
@@ -589,13 +576,11 @@ footer .footer-top {
   color: #fff;
   width: 100%;
   padding: 5px 0;
-  /*border: 1px solid purple;*/
 }
 
 @media (min-width: 769px) {
   footer .footer-top {
     font-size: 9px;
-    /*border: 1px solid red;*/
   }
 }
 
@@ -643,7 +628,6 @@ footer .footer-top-icon {
     left: 47%;
     top: 5px;
     padding: 25px 8px;
-    /*border: 1px solid purple;*/
   }
 }
 
@@ -702,6 +686,7 @@ footer .footer-top-container {
   }
   footer .middle-adjust-font {
     font-size: 11px;
+    width: 30vw;
   }
   footer .footer-top-middle-nested {
     text-shadow: 0 0 2px #000;
@@ -766,7 +751,6 @@ footer .footer-bottom-wrapper {
   background-color: #1f1f1f;
   height: 60px;
   width: 100%;
-  /* border: 1px solid hotpink;*/
 }
 
 @media (min-width: 769px) {
@@ -797,12 +781,10 @@ footer .footer-bottom-icons {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /*justify-content: $jcenter;*/
   width: 50%;
   height: 3vh;
   color: #fff;
   font-size: 10px;
-  /*border: 1px solid brown;*/
   background-color: #1f1f1f;
 }
 

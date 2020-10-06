@@ -318,7 +318,7 @@ header {
 main {
   margin-top: 65px;
   padding: 20px;
-  
+
   .scala-table-large {
     display: $none;
   }
@@ -333,14 +333,14 @@ main {
 
   .scala-container {
     @include flexeven();
-    height: 14vh; 
-    padding-top: 25px; 
+
+    height: 14vh;
+    padding-top: 25px;
   }
 
   @include tablet {
     .scala-container {
-       
-      padding-top: 15px; 
+      padding-top: 15px;
     }
   }
 
@@ -365,10 +365,8 @@ main {
   }
 
   .scala-wrapper-grand {
-    /*border: 1px solid purple;*/
     display: $flex;
     justify-content: $jcenter;
-    
   }
 
   .scala-wrapper {
@@ -383,7 +381,8 @@ main {
     padding-top: 100px;
   }
 
-  .scala-table, th {
+  .scala-table,
+  th {
     border: 1px solid #c4bebe;
     color: rgb(90, 85, 85);
   }
@@ -413,10 +412,7 @@ main {
     .scala-container {
       align-items: $flexstart;
       width: 47vw;
-      /*border: 1px solid red;*/
       padding-top: 35px;
-      /*margin-left: 20px;*/ 
-      
     }
 
     .scala-text-lg {
@@ -429,17 +425,16 @@ main {
   }
 
   @include desktop-lg {
-   .scala-wrapper {
-    width: 50vw;
-   }
+    .scala-wrapper {
+      width: 50vw;
+    }
 
-   .scala-container {
-    width: 32vw; 
-  }
+    .scala-container {
+      width: 32vw;
+    }
   }
 
   .scala-apply {
-    /*border: 1px solid red;*/
     display: $flex;
     justify-content: flex-end;
     max-width: 60vw;
@@ -447,7 +442,6 @@ main {
 
   @include desktop {
     .scala-apply {
-      /*border: 1px solid red;*/
       width: 47vw;
     }
   }
@@ -465,16 +459,10 @@ main {
     background-color: $nativeBlue;
     border: 1px solid $nativeBlue;
     cursor: pointer;
-  } 
+  }
 
   .scala-apply button {
     padding: 1px;
-  }
-
-  .scala-text-container {
-    /*border: 1px solid hotpink;*/
-    height: 20vh;
-    min-width: 200px;
   }
 
   .scala-text {
@@ -534,15 +522,14 @@ main {
   }
 
   .fill-in-credentials {
-    /*border: 1px solid red;*/
     height: 5vh;
     width: 40vw;
     padding: 5px;
-    background-color: #DFE2E3;
-    border: 1px solid #DFE2E3;
+    background-color: #dfe2e3;
+    border: 1px solid #dfe2e3;
   }
 
-    .sign-up {
+  .sign-up {
     display: $flex;
     align-items: $alignCenter;
     justify-content: $jcenter;
@@ -575,6 +562,7 @@ main {
   @include tablet {
     .map-directions-container {
       display: block;
+      margin-bottom: 20px;
     }
 
     .map-directons {

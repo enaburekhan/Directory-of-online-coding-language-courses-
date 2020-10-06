@@ -345,7 +345,6 @@ main .language {
 }
 
 main .scala-wrapper-grand {
-  /*border: 1px solid purple;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -372,7 +371,8 @@ main .scala-wrapper {
   padding-top: 100px;
 }
 
-main .scala-table, main th {
+main .scala-table,
+main th {
   border: 1px solid #c4bebe;
   color: #5a5555;
 }
@@ -409,9 +409,7 @@ main .scala-table, main th {
         -ms-flex-align: start;
             align-items: flex-start;
     width: 47vw;
-    /*border: 1px solid red;*/
     padding-top: 35px;
-    /*margin-left: 20px;*/
   }
   main .scala-text-lg {
     display: block;
@@ -432,7 +430,6 @@ main .scala-table, main th {
 }
 
 main .scala-apply {
-  /*border: 1px solid red;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -444,7 +441,6 @@ main .scala-apply {
 
 @media (min-width: 1024px) {
   main .scala-apply {
-    /*border: 1px solid red;*/
     width: 47vw;
   }
 }
@@ -466,12 +462,6 @@ main .scala-apply button {
 
 main .scala-apply button {
   padding: 1px;
-}
-
-main .scala-text-container {
-  /*border: 1px solid hotpink;*/
-  height: 20vh;
-  min-width: 200px;
 }
 
 main .scala-text {
@@ -550,12 +540,11 @@ main .register-margin {
 }
 
 main .fill-in-credentials {
-  /*border: 1px solid red;*/
   height: 5vh;
   width: 40vw;
   padding: 5px;
-  background-color: #DFE2E3;
-  border: 1px solid #DFE2E3;
+  background-color: #dfe2e3;
+  border: 1px solid #dfe2e3;
 }
 
 main .sign-up {
@@ -597,6 +586,7 @@ main .map-directions-container {
 @media (min-width: 769px) {
   main .map-directions-container {
     display: block;
+    margin-bottom: 20px;
   }
   main .map-directons {
     display: -webkit-box;

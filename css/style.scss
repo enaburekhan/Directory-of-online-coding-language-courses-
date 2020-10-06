@@ -401,6 +401,20 @@ main {
     border-radius: $border-3;
   }
 
+  .change {
+    color: $colorWhite;
+    font-size: 13px;
+    text-align: $textCenter;
+    display: $flex;
+    justify-content: $jcenter;
+    align-items: $alignCenter;
+  }
+
+   a {
+    text-decoration: none;
+    text-shadow: none;
+  }
+
   @include tablet {
     .form-input {
       width: 280px;

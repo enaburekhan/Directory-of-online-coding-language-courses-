@@ -368,7 +368,8 @@ main {
   .bg-img {
     width: auto;
     height: auto;
-    /*background-size: auto;*/
+
+    /* background-size: auto; */
     object-fit: cover;
   }
 
@@ -385,13 +386,13 @@ main {
     }
   }
 
-  /*@include desktop-lg {
+  /* @include desktop-lg {
     .bg-img-2 {
       background: url(main3.jpg);
       background-repeat: no-repeat;
       background-size: auto;
     }
-  }*/
+  } */
 
   .form-input {
     width: 320px;

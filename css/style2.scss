@@ -342,6 +342,13 @@ header {
 
 main {
   margin-top: 80px;
+  padding-right: 50px;
+
+  @include tablet {
+    main {
+      padding-right: 0;
+    }
+  }
 
   .filter-container {
     display: $none;

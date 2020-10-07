@@ -30,7 +30,7 @@ body {
   gap: 20px;
 }
 
-$mobile: 150px;
+$mobile: 300px;
 
 @mixin mobile {
   @media (min-width: #{$mobile}) {
@@ -325,6 +325,11 @@ header {
 
 main {
   margin-top: 50px;
+  padding-left: 50px;
+
+  @include tablet {
+    padding-left: 0;
+  }
 
   .echantill-edu-container {
     @include flexCenter();
@@ -679,6 +684,11 @@ main {
 
 footer {
   min-width: 100%;
+  padding-left: 50px;
+
+  @include tablet {
+    padding-left: 0;
+  }
 
   .footer-middle-container {
     display: $none;

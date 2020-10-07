@@ -284,6 +284,13 @@ header .echantill-icons a {
 
 main {
   margin-top: 80px;
+  padding-right: 50px;
+}
+
+@media (min-width: 769px) {
+  main main {
+    padding-right: 0;
+  }
 }
 
 main .filter-container {

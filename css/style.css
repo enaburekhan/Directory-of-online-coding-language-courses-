@@ -275,7 +275,6 @@ header .echantill-icons a {
 
 main {
   margin-top: 50px;
-  padding-left: 50px;
 }
 
 @media (min-width: 821px) {
@@ -592,8 +591,14 @@ main .locate-p {
 }
 
 main .admitted-students img {
-  width: 300px;
+  width: 40vw;
   border-radius: 50%;
+}
+
+@media (min-width: 821px) {
+  main .admitted-students img {
+    width: 300px;
+  }
 }
 
 main .admitted-students-container,
@@ -654,7 +659,6 @@ main .istock {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    border: 1px solid white;
   }
 }
 
@@ -758,7 +762,6 @@ main .platform {
 
 footer {
   min-width: 100%;
-  padding-left: 50px;
 }
 
 @media (min-width: 821px) {

@@ -325,7 +325,6 @@ header {
 
 main {
   margin-top: 50px;
-  padding-left: 50px;
 
   @include tablet {
     padding-left: 0;
@@ -560,8 +559,14 @@ main {
   }
 
   .admitted-students img {
-    width: 300px;
+    width: 40vw;
     border-radius: $border-radius;
+  }
+
+  @include tablet {
+    .admitted-students img {
+      width: 300px;
+    }
   }
 
   .admitted-students-container,
@@ -592,7 +597,6 @@ main {
     .istock {
       display: flex;
       flex-direction: row;
-      border: 1px solid white;
     }
   }
 
@@ -684,7 +688,6 @@ main {
 
 footer {
   min-width: 100%;
-  padding-left: 50px;
 
   @include tablet {
     padding-left: 0;

@@ -12,11 +12,6 @@ body {
   font-family: "acumin-pro", "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-@font-face {
-  font-family: 'MyWebFont';
-  src: url("myfont.woff2") format("woff2"), url("myfont.woff") format("woff");
-}
-
 header .fixed-top {
   position: fixed;
   top: 0;

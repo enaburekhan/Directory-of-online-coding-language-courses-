@@ -275,16 +275,6 @@ header .echantill-icons a {
 
 main {
   margin-top: 50px;
-  /*.bg-img-2 {
-    display: $none;
-  }*/
-  /* @include desktop-lg {
-    .bg-img-2 {
-      background: url(main3.jpg);
-      background-repeat: no-repeat;
-      background-size: auto;
-    }
-  } */
 }
 
 main .echantill-edu-container {
@@ -308,7 +298,6 @@ main .echantill-edu {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  /*width: $width-95;*/
   height: 25vh;
   top: 240px;
   -webkit-box-orient: vertical;
@@ -317,7 +306,6 @@ main .echantill-edu {
           flex-direction: column;
   border-radius: 5px;
   text-shadow: 2px 2px 5px #111;
-  /*border: 1px solid red;*/
   width: 100%;
 }
 
@@ -370,7 +358,6 @@ main .form-key {
 main .bg-img {
   width: auto;
   height: auto;
-  /* background-size: auto; */
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -565,7 +552,7 @@ main .four-steps {
 }
 
 main .home-text {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 main .four-steps-nested {

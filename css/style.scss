@@ -332,16 +332,14 @@ main {
 
   .echantill-edu {
     @include flexCenter();
+
     position: absolute;
-    /*width: $width-95;*/
     height: 25vh;
     top: 240px;
     flex-direction: $direction;
     border-radius: $border;
     text-shadow: 2px 2px 5px #111;
-    /*border: 1px solid red;*/
     width: 100%;
-
   }
 
   .echantill-text {
@@ -378,7 +376,6 @@ main {
   .bg-img {
     width: auto;
     height: auto;
-    /* background-size: auto; */
     object-fit: cover;
   }
 
@@ -388,10 +385,6 @@ main {
     }
   }
 
-  /*.bg-img-2 {
-    display: $none;
-  }*/
-
   @include desktop {
     .bg-img {
       background: url(unnamed.jpg);
@@ -400,14 +393,6 @@ main {
       width: 100%;
     }
   }
-
-  /* @include desktop-lg {
-    .bg-img-2 {
-      background: url(main3.jpg);
-      background-repeat: no-repeat;
-      background-size: auto;
-    }
-  } */
 
   .form-input {
     width: 320px;
@@ -545,7 +530,7 @@ main {
   }
 
   .home-text {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .four-steps-nested {

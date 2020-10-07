@@ -427,8 +427,6 @@ main {
     height: 200px;
     color: $primaryColor;
     background-color: $primaryColor;
-   /*margin-bottom: 20px;
-    border: 1px solid purple;*/
   }
 
   .courses-nested-wrapper {
@@ -437,14 +435,7 @@ main {
     flex-direction: $direction;
     align-items: $alignCenter;
     width: 100%;
-    /*border: 1px solid red;*/
   }
-
-  /*.course-nested-container {
-    height: 50px;
-    width: 300px;
-  }*/
-
 
   @include desktop {
     .courses-nested-wrapper {
@@ -457,106 +448,6 @@ main {
       width: 220px;
     }
   }
-
- /* .course-nested {
-    position: absolute;
-    bottom: 350px;
-    left: 40%;
-    width: 50%;
-  }*/
-
- /* @include tablet {
-    .course-nested {
-      left: 45%;
-      width: 40%;
-      bottom: 390px;
-    }
-  }
-
-  @include desktop {
-    .course-nested {
-      left: 10%;
-      bottom: 175px;
-      text-align: $textCenter;
-    }
-  }
-
-  @include desktop-lg {
-    .course-nested {
-      left: 10%;
-      bottom: 200px;
-    }
-  }
-
-  @include desktop-xlg {
-    .course-nested {
-      left: 14%;
-      bottom: 250px;
-    }
-  }
-
-  .course-top-1 {
-    bottom: 150px;
-  }
-
-  @include tablet {
-    .course-top-1 {
-      bottom: 180px;
-    }
-  }
-
-  @include desktop {
-    .course-top-1 {
-      left: 28%;
-      text-align: $textCenter;
-      bottom: 173px;
-    }
-  }
-
-  @include desktop-lg {
-    .course-top-1 {
-      left: 29%;
-      bottom: 200px;
-    }
-  }
-
-  @include desktop-xlg {
-    .course-top-1 {
-      bottom: 250px;
-    }
-  }
-
-  .course-top-2 {
-    bottom: -60px;
-  }
-
-  @include tablet {
-    .course-top-2 {
-      bottom: -10px;
-    }
-  }
-
-  @include desktop {
-    .course-top-2 {
-      left: 47%;
-      text-align: $textCenter;
-      bottom: 173px;
-    }
-  }
-
-  @include desktop-lg {
-    .course-top-2 {
-      bottom: 200px;
-      left: 48%;
-    }
-  }
-
-  @include desktop-xlg {
-    .course-top-2 {
-      bottom: 250px;
-      left: 43%;
-    }
-  }*/
 
   .course-nested a {
     color: $colorWhite;

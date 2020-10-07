@@ -11,12 +11,6 @@ body {
   font-family: "acumin-pro", "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-@font-face {
-  font-family: 'MyWebFont';
-  src:  url('myfont.woff2') format('woff2'),
-        url('myfont.woff') format('woff');
-}
-
 @mixin flexCenter {
   display: flex;
   justify-content: space-around;
@@ -341,13 +335,13 @@ main {
     display: $none;
   }
 
-
   @include desktop {
     margin-top: 40px;
   }
 
   .scala-container {
     @include flexeven();
+
     height: 14vh;
     padding-top: 25px;
     padding-bottom: 20px;
@@ -429,7 +423,6 @@ main {
       align-items: $flexstart;
       width: 36vw;
       padding-top: 35px;
-      
     }
 
     .scala-text-lg {

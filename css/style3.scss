@@ -378,6 +378,12 @@ main {
     justify-content: $jcenter;
   }
 
+  @include desktop {
+    .scala-wrapper-grand {
+      margin-top: 20px;
+    }
+  }
+
   .scala-wrapper {
     border: 3px solid #c4bebe;
     display: $flex;
@@ -425,6 +431,12 @@ main {
       padding-top: 35px;
     }
 
+    @include desktop {
+      .scala-container {
+        margin-top: 25px;
+      }
+    }
+
     .scala-text-lg {
       display: block;
       color: $topnavgray;
@@ -447,7 +459,7 @@ main {
   .scala-apply {
     display: $flex;
     justify-content: flex-end;
-    width: 75vw;
+    width: 65vw;
   }
 
   @include desktop {

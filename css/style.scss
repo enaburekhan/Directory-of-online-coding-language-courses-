@@ -338,8 +338,8 @@ main {
     @include flexCenter();
 
     position: absolute;
-    height: 25vh;
-    top: 240px;
+    height: 30vh;
+    top: 15%;
     flex-direction: $direction;
     border-radius: $border;
     text-shadow: 2px 2px 5px #111;
@@ -351,6 +351,7 @@ main {
     color: $colorWhite;
     text-align: $textCenter;
     width: $width-95;
+    font-size: 25px;
   }
 
   .form-key {

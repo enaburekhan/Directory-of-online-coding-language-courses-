@@ -304,8 +304,8 @@ main .echantill-edu {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  height: 25vh;
-  top: 240px;
+  height: 30vh;
+  top: 15%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -320,6 +320,7 @@ main .echantill-text {
   color: #fff;
   text-align: center;
   width: 95%;
+  font-size: 25px;
 }
 
 main .form-key {

@@ -354,6 +354,12 @@ main .scala-wrapper-grand {
           justify-content: center;
 }
 
+@media (min-width: 1024px) {
+  main .scala-wrapper-grand {
+    margin-top: 20px;
+  }
+}
+
 main .scala-wrapper {
   border: 3px solid #c4bebe;
   display: -webkit-box;
@@ -413,6 +419,15 @@ main th {
     width: 36vw;
     padding-top: 35px;
   }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) {
+  main .scala-container {
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 1024px) {
   main .scala-text-lg {
     display: block;
     color: #969696;
@@ -438,7 +453,7 @@ main .scala-apply {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  width: 75vw;
+  width: 65vw;
 }
 
 @media (min-width: 1024px) {

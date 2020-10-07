@@ -38,6 +38,14 @@ $mobile: 150px;
   }
 }
 
+$mobile-xx: 460px;
+
+@mixin mobile-xx {
+  @media (min-width: #{$mobile-xx}) {
+    @content;
+  }
+}
+
 $tablet: 769px;
 
 @mixin tablet {
@@ -495,7 +503,7 @@ footer {
 
   .footer-top {
     position: relative;
-    font-size: 10px;
+    font-size: 8px;
     display: $flex;
     justify-content: $between;
     border-top: 0.1px solid rgb(143, 133, 133);
@@ -503,6 +511,24 @@ footer {
     color: $colorWhite;
     width: 100%;
     padding: 5px 0;
+  }
+
+  @include mobile-xx {
+    .footer-top-container {
+      width: 100%;
+    }
+
+    .footer-top {
+      font-size: 7px;
+    }
+  }
+
+  @include desktop {
+    .footer-top-container {
+      display: $flex;
+      justify-content: $jcenter;
+      align-items: $alignCenter;
+    }
   }
 
   @include tablet {
@@ -513,7 +539,7 @@ footer {
 
   @include desktop {
     .footer-top {
-      width: 85vw;
+      width: 100vw;
       font-size: 10px;
     }
   }
@@ -528,6 +554,13 @@ footer {
     background-color: $colorblack;
     padding: 2px 1px 1px 1px;
     z-index: 5;
+  }
+
+  @include mobile-xx {
+    .footer-top-icon {
+      margin: 0 10px 0 3px;
+      left: 47%;
+    }
   }
 
   @include tablet {

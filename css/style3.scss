@@ -572,8 +572,33 @@ main {
     width: 10vw;
   }
 
+  .google-img {
+    width: 700px;
+    height: 400px;
+  }
+
   .map-directions-container {
-    display: $none;
+    display: $flex;
+    flex-direction: $direction;
+    align-items: $alignCenter;
+    margin-bottom: 20px;
+  }
+
+  .map-directons {
+    display: $flex;
+    align-items: $alignCenter;
+    justify-content: $jcenter;
+    height: 10vh;
+  }
+
+  .map-directons .fas,
+  .map-directons p {
+    color: $primaryColor;
+  }
+
+  .map-directons p {
+    font-weight: $font-weight;
+    padding-left: 1px;
   }
 
   @include tablet {

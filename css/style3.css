@@ -588,8 +588,46 @@ main .sign-up p {
   width: 10vw;
 }
 
+main .google-img {
+  width: 700px;
+  height: 400px;
+}
+
 main .map-directions-container {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+main .map-directons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 10vh;
+}
+
+main .map-directons .fas,
+main .map-directons p {
+  color: #d35649;
+}
+
+main .map-directons p {
+  font-weight: 900;
+  padding-left: 1px;
 }
 
 @media (min-width: 769px) {

@@ -216,7 +216,7 @@ header .topnav {
           flex-direction: column;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 821px) {
   header .topnav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -245,7 +245,7 @@ header .echantill {
   font-weight: 700;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 821px) {
   header .echantill {
     min-width: 200px;
     -webkit-box-pack: start;
@@ -275,13 +275,16 @@ header .echantill-icons a {
 
 main {
   margin-top: 50px;
-  /*@include desktop-lg {
+  /*.bg-img-2 {
+    display: $none;
+  }*/
+  /* @include desktop-lg {
     .bg-img-2 {
       background: url(main3.jpg);
       background-repeat: no-repeat;
       background-size: auto;
     }
-  }*/
+  } */
 }
 
 main .echantill-edu-container {
@@ -305,8 +308,8 @@ main .echantill-edu {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  width: 95%;
-  height: 230px;
+  /*width: $width-95;*/
+  height: 25vh;
   top: 240px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -314,6 +317,8 @@ main .echantill-edu {
           flex-direction: column;
   border-radius: 5px;
   text-shadow: 2px 2px 5px #111;
+  /*border: 1px solid red;*/
+  width: 100%;
 }
 
 main .echantill-text {
@@ -343,7 +348,7 @@ main .form-key {
   border-radius: 5px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 821px) {
   main .form-key {
     width: 400px;
     -webkit-box-align: center;
@@ -365,18 +370,20 @@ main .form-key {
 main .bg-img {
   width: auto;
   height: auto;
-  /*background-size: auto;*/
+  /* background-size: auto; */
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-main .bg-img-2 {
-  display: none;
+@media (min-width: 821px) {
+  main .bg-img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1024px) {
   main .bg-img {
-    background: url(main.jpg);
+    background: url(unnamed.jpg);
     background-repeat: no-repeat;
     background-size: auto;
     width: 100%;
@@ -412,7 +419,7 @@ main .change-a a {
   text-shadow: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 821px) {
   main .form-input {
     width: 280px;
   }
@@ -423,7 +430,7 @@ main .primarycolor {
   text-align: center;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 821px) {
   main .primarycolor {
     width: 70px;
     border-radius: 0;
@@ -465,7 +472,7 @@ main .key-word {
   text-shadow: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 821px) {
   main .key-word {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -501,7 +508,7 @@ main .four-steps {
   font-size: 13px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 821px) {
   main .four-steps {
     height: 500px;
     padding: 20px;
@@ -509,7 +516,7 @@ main .four-steps {
   }
 }
 
-@media (min-width: 769px) and (min-width: 1024px) {
+@media (min-width: 821px) and (min-width: 1024px) {
   main .four-steps {
     display: -ms-grid;
     display: grid;
@@ -519,7 +526,7 @@ main .four-steps {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 821px) {
   main .four-steps-nested {
     height: 1000px;
     min-width: 150px;
@@ -529,13 +536,13 @@ main .four-steps {
   }
 }
 
-@media (min-width: 769px) and (min-width: 1024px) {
+@media (min-width: 821px) and (min-width: 1024px) {
   main .four-steps-nested {
     height: 50vh;
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 821px) {
   main .apply-margin {
     margin-top: 20px;
     height: 40%;
@@ -543,18 +550,22 @@ main .four-steps {
   }
 }
 
-@media (min-width: 769px) and (min-width: 1024px) {
+@media (min-width: 821px) and (min-width: 1024px) {
   main .apply-margin {
     margin-top: 10px;
     line-height: 18px;
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 821px) {
   main .locate-p {
     line-height: 18px;
     margin: 0 20px 0 20px;
   }
+}
+
+main .home-text {
+  font-size: 15px;
 }
 
 main .four-steps-nested {
@@ -615,7 +626,7 @@ main .istock {
           align-items: center;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 821px) {
   main .future-nest-reset,
   main .future-nest {
     display: -webkit-box;
@@ -686,8 +697,8 @@ main .future-nest-reset {
 }
 
 main .registered {
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 15px;
+  line-height: 18px;
   font-weight: 900;
 }
 
@@ -742,7 +753,7 @@ main .istock {
 }
 
 main .platform {
-  font-size: 11px;
+  font-size: 15px;
 }
 
 @media (min-width: 1024px) {
@@ -808,7 +819,7 @@ footer .footer-top {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 821px) {
   footer .footer-top {
     font-size: 10px;
   }
@@ -826,7 +837,7 @@ footer .footer-top-icon {
   z-index: 5;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 821px) {
   footer .footer-top-icon {
     left: 48.5%;
   }

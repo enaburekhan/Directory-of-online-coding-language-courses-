@@ -46,6 +46,14 @@ $tablet: 769px;
   }
 }
 
+$tablet: 821px;
+
+@mixin tablet-x {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
 $desktop: 1024px;
 
 @mixin desktop {
@@ -324,14 +332,16 @@ main {
 
   .echantill-edu {
     @include flexCenter();
-
     position: absolute;
-    width: $width-95;
-    height: 230px;
+    /*width: $width-95;*/
+    height: 25vh;
     top: 240px;
     flex-direction: $direction;
     border-radius: $border;
     text-shadow: 2px 2px 5px #111;
+    /*border: 1px solid red;*/
+    width: 100%;
+
   }
 
   .echantill-text {
@@ -368,18 +378,23 @@ main {
   .bg-img {
     width: auto;
     height: auto;
-
     /* background-size: auto; */
     object-fit: cover;
   }
 
-  .bg-img-2 {
-    display: $none;
+  @include tablet-x {
+    .bg-img {
+      width: 100%;
+    }
   }
+
+  /*.bg-img-2 {
+    display: $none;
+  }*/
 
   @include desktop {
     .bg-img {
-      background: url(main.jpg);
+      background: url(unnamed.jpg);
       background-repeat: no-repeat;
       background-size: auto;
       width: 100%;
@@ -529,6 +544,10 @@ main {
     }
   }
 
+  .home-text {
+    font-size: 15px;
+  }
+
   .four-steps-nested {
     height: 110px;
     min-width: 150px;
@@ -610,8 +629,8 @@ main {
   }
 
   .registered {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 15px;
+    line-height: 18px;
     font-weight: $font-weight;
   }
 
@@ -663,7 +682,7 @@ main {
   }
 
   .platform {
-    font-size: 11px;
+    font-size: 15px;
   }
 
   @include desktop {

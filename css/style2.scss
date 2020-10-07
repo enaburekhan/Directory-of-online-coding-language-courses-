@@ -422,21 +422,29 @@ main {
     z-index: 3;
   }
 
-  .bg-grad img {
+  .bg-grad {
     width: 200px;
     height: 200px;
     color: $primaryColor;
     background-color: $primaryColor;
-    margin-bottom: 5px;
+   /*margin-bottom: 20px;
+    border: 1px solid purple;*/
   }
 
   .courses-nested-wrapper {
-    height: 600px;
+    height: 800px;
     display: $flex;
     flex-direction: $direction;
     align-items: $alignCenter;
     width: 100%;
+    /*border: 1px solid red;*/
   }
+
+  /*.course-nested-container {
+    height: 50px;
+    width: 300px;
+  }*/
+
 
   @include desktop {
     .courses-nested-wrapper {
@@ -450,14 +458,14 @@ main {
     }
   }
 
-  .course-nested {
+ /* .course-nested {
     position: absolute;
     bottom: 350px;
     left: 40%;
     width: 50%;
-  }
+  }*/
 
-  @include tablet {
+ /* @include tablet {
     .course-nested {
       left: 45%;
       width: 40%;
@@ -548,7 +556,7 @@ main {
       bottom: 250px;
       left: 43%;
     }
-  }
+  }*/
 
   .course-nested a {
     color: $colorWhite;

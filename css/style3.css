@@ -12,6 +12,11 @@ body {
   font-family: "acumin-pro", "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+@font-face {
+  font-family: 'MyWebFont';
+  src: url("myfont.woff2") format("woff2"), url("myfont.woff") format("woff");
+}
+
 header .fixed-top {
   position: fixed;
   top: 0;
@@ -308,6 +313,7 @@ main .scala-container {
           flex-direction: column;
   height: 14vh;
   padding-top: 25px;
+  padding-bottom: 20px;
 }
 
 @media (min-width: 769px) {
@@ -364,8 +370,8 @@ main .scala-wrapper {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 450px;
-  width: 70%;
+  height: 550px;
+  width: 80%;
   margin-top: 40px;
   margin-bottom: 20px;
   padding-top: 100px;
@@ -375,6 +381,7 @@ main .scala-table,
 main th {
   border: 1px solid #c4bebe;
   color: #5a5555;
+  font-size: 12px;
 }
 
 @media (min-width: 1024px) {
@@ -383,6 +390,7 @@ main th {
   }
   main .scala-table-large {
     display: block;
+    font-size: 15px;
   }
   main .scala-wrapper {
     display: -webkit-box;
@@ -402,13 +410,12 @@ main th {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border: 3px solid #c4bebe;
   }
   main .scala-container {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    width: 47vw;
+    width: 36vw;
     padding-top: 35px;
   }
   main .scala-text-lg {
@@ -425,7 +432,7 @@ main th {
     width: 50vw;
   }
   main .scala-container {
-    width: 32vw;
+    width: 24vw;
   }
 }
 
@@ -436,18 +443,24 @@ main .scala-apply {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  max-width: 60vw;
+  width: 75vw;
 }
 
 @media (min-width: 1024px) {
   main .scala-apply {
-    width: 47vw;
+    width: 36vw;
   }
 }
 
 @media (min-width: 1131px) {
   main .scala-apply {
-    width: 31.6vw;
+    width: 65%;
+  }
+}
+
+@media (min-width: 1250px) {
+  main .scala-apply {
+    max-width: 24vw;
   }
 }
 
@@ -503,6 +516,7 @@ main .click-details p {
 main .scala-text-container {
   min-height: 40vh;
   width: 100%;
+  padding-bottom: 20px;
 }
 
 main .register-form {

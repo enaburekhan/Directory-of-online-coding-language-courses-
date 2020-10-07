@@ -11,6 +11,12 @@ body {
   font-family: "acumin-pro", "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+@font-face {
+  font-family: 'MyWebFont';
+  src:  url('myfont.woff2') format('woff2'),
+        url('myfont.woff') format('woff');
+}
+
 @mixin flexCenter {
   display: flex;
   justify-content: space-around;
@@ -58,6 +64,14 @@ $desktop-lg: 1131px;
 
 @mixin desktop-lg {
   @media (min-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+$desktop-xlg: 1250px;
+
+@mixin desktop-xlg {
+  @media (min-width: #{$desktop-xlg}) {
     @content;
   }
 }
@@ -327,15 +341,16 @@ main {
     display: $none;
   }
 
+
   @include desktop {
     margin-top: 40px;
   }
 
   .scala-container {
     @include flexeven();
-
     height: 14vh;
     padding-top: 25px;
+    padding-bottom: 20px;
   }
 
   @include tablet {
@@ -374,8 +389,8 @@ main {
     display: $flex;
     flex-direction: $direction;
     justify-content: space-around;
-    height: 450px;
-    width: 70%;
+    height: 550px;
+    width: 80%;
     margin-top: 40px;
     margin-bottom: 20px;
     padding-top: 100px;
@@ -385,6 +400,7 @@ main {
   th {
     border: 1px solid #c4bebe;
     color: rgb(90, 85, 85);
+    font-size: 12px;
   }
 
   @include desktop {
@@ -394,6 +410,7 @@ main {
 
     .scala-table-large {
       display: block;
+      font-size: 15px;
     }
 
     .scala-wrapper {
@@ -406,13 +423,13 @@ main {
       margin-bottom: 20px;
       padding-top: 30px;
       align-items: $alignCenter;
-      border: 3px solid #c4bebe;
     }
 
     .scala-container {
       align-items: $flexstart;
-      width: 47vw;
+      width: 36vw;
       padding-top: 35px;
+      
     }
 
     .scala-text-lg {
@@ -430,25 +447,31 @@ main {
     }
 
     .scala-container {
-      width: 32vw;
+      width: 24vw;
     }
   }
 
   .scala-apply {
     display: $flex;
     justify-content: flex-end;
-    max-width: 60vw;
+    width: 75vw;
   }
 
   @include desktop {
     .scala-apply {
-      width: 47vw;
+      width: 36vw;
     }
   }
 
   @include desktop-lg {
     .scala-apply {
-      width: 31.6vw;
+      width: 65%;
+    }
+  }
+
+  @include desktop-xlg {
+    .scala-apply {
+      max-width: 24vw;
     }
   }
 
@@ -498,6 +521,7 @@ main {
   .scala-text-container {
     min-height: 40vh;
     width: 100%;
+    padding-bottom: 20px;
   }
 
   .register-form {

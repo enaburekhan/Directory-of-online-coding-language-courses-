@@ -6,7 +6,7 @@
 
 
 
-![onlineCodingDirectory-screen-shot](https://user-images.githubusercontent.com/51296741/95068907-dda4f500-06fd-11eb-8e0f-36629e7ecaa5.png)
+![onlineCodingDirectory-screen-shot](https://user-images.githubusercontent.com/51296741/95395562-d6950700-08f6-11eb-863c-d14924165039.png)
 
 
 ## Built With
@@ -21,6 +21,8 @@
 
 
 [Live Demo Link](https://www.loom.com/share/6be0243ac6ff4c5eb1c17ddec4a729e9)
+
+[Live Video Link](https://www.loom.com/share/6be0243ac6ff4c5eb1c17ddec4a729e9)
 
 
 ## Getting Started

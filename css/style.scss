@@ -1,0 +1,890 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "acumin-pro", "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flexeven {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+@mixin gridColumn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+$mobile: 375px;
+
+@mixin mobile {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+$tablet: 769px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+$tablet: 821px;
+
+@mixin tablet-x {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+$desktop: 1024px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+$desktop-lg: 1179px;
+
+@mixin desktop-lg {
+  @media (min-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+$primaryColor: #d35649;
+$direction: column;
+$between: space-between;
+$colorWhite: #fff;
+$formColor: #c5c2c2;
+$border: 5px;
+$border-3: 3px;
+$font-weight: 900;
+$textCenter: center;
+$width-95: 95%;
+$flexstart: flex-start;
+$flex: flex;
+$colorblack: #111;
+$colorgray: #7d8486;
+$font-weight-700: 700;
+$padding: 5px;
+$colordkgray: #1f1f1f;
+$border-radius: 50%;
+$colorbrown: #e17e65;
+$alignCenter: center;
+$row: row;
+$jcenter: center;
+$alignEnd: flex-end;
+$nativeBlue: #519bd7;
+$none: none;
+$mainNav: #d2d2d2;
+$darklight: lighten(#111, 60%);
+$topnavgray: #969696;
+
+header {
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 9;
+  }
+
+  .main-navbar {
+    display: $none;
+  }
+
+  @include desktop {
+    .main-navbar {
+      display: block;
+    }
+
+    .main-top-navbar {
+      background-color: $mainNav;
+      border-top-left-radius: $border;
+      border-top-right-radius: $border;
+    }
+
+    .main-top-icon-container {
+      @include flexCenter ();
+
+      justify-content: $between;
+      padding: $padding;
+    }
+
+    .top-left-icon .one {
+      color: #e76d6b;
+    }
+
+    .top-left-icon .two {
+      color: #dfbc43;
+    }
+
+    .top-left-icon .three {
+      color: #3dba78;
+    }
+
+    .top-right-icon {
+      color: $topnavgray;
+    }
+
+    .main-middle-icon-container {
+      display: $flex;
+      justify-content: $between;
+      padding: $padding;
+      min-width: 100%;
+    }
+
+    .main-middle-icon-left-wrapper {
+      @include flexCenter();
+
+      min-width: 63%;
+    }
+
+    .middle-left {
+      width: 8%;
+      text-align: $textCenter;
+      background-color: #e6e6e6;
+
+      @include flexCenter();
+
+      border-radius: 2px;
+      padding: 4px 3px;
+    }
+
+    .bk-arrow {
+      color: $darklight;
+    }
+
+    .frt-arrow {
+      color: $topnavgray;
+    }
+
+    .middle-center .plus {
+      width: 4vw;
+      text-align: $textCenter;
+      background-color: $colorWhite;
+      font-size: 11px;
+      padding: 6px;
+      margin-right: -4.5px;
+      color: $topnavgray;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+
+    .middle-center .input-nav {
+      width: 45vw;
+      padding: 3px;
+      border: 0.01px solid $colorWhite;
+    }
+
+    .middle-center .curve-arrow {
+      font-size: 13px;
+      padding: 5px;
+      background-color: $colorWhite;
+      width: 4vw;
+      text-align: $textCenter;
+      margin-left: -5px;
+      color: $topnavgray;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+
+    .main-middle-icon-right-wrapper {
+      @include flexCenter();
+
+      justify-content: $between;
+      width: 36%;
+      margin-right: 5px;
+    }
+
+    .middle-center-2 .fab {
+      text-align: $textCenter;
+      padding: 2px 2px 5px 2px;
+      background-color: $colorWhite;
+      width: 3vw;
+      color: $topnavgray;
+      margin: -3px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    .middle-center-2 .input-nav-2 {
+      width: 29vw;
+      padding: 3px;
+      margin: -2px;
+      border: 0.01px solid $colorWhite;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .middle-right .fas {
+      color: $darklight;
+      padding: 4px;
+      text-align: $textCenter;
+      width: 3vw;
+      border-radius: $border;
+      background-color: #e6e6e6;
+    }
+
+    .main-bottom-navbar {
+      background-color: $primaryColor;
+      height: 8vh;
+      width: 100%;
+
+      @include flexCenter();
+    }
+
+    .main-bottom-navbar a {
+      text-decoration: none;
+    }
+
+    .echantill {
+      width: 10vw;
+    }
+
+    .echantill a {
+      color: $colorWhite;
+    }
+
+    .echantill-icons {
+      width: 40vw;
+      font-size: 12px;
+      font-weight: $font-weight;
+    }
+  }
+
+  .topnav {
+    @include flexCenter();
+
+    max-width: 100%;
+    height: 80px;
+    background-color: $primaryColor;
+    flex-direction: $direction;
+  }
+
+  @include tablet {
+    .topnav {
+      flex-direction: row;
+    }
+  }
+
+  @include desktop {
+    .topnav {
+      display: $none;
+    }
+  }
+
+  .echantill {
+    @include flexCenter();
+
+    min-width: 130px;
+    color: $colorWhite;
+    font-weight: 700;
+  }
+
+  @include tablet {
+    .echantill {
+      min-width: 200px;
+      justify-content: $flexstart;
+    }
+
+    .echantill .fas {
+      padding-right: 4px;
+    }
+  }
+
+  .echantill-icons {
+    @include flexCenter();
+
+    min-width: 200px;
+  }
+
+  .echantill-icons a {
+    color: $colorWhite;
+  }
+}
+
+main {
+  margin-top: 50px;
+
+  @include tablet {
+    padding-left: 0;
+  }
+
+  .echantill-edu-container {
+    @include flexCenter();
+  }
+
+  .echantill-edu {
+    @include flexCenter();
+
+    position: absolute;
+    height: 30vh;
+    top: 15%;
+    flex-direction: $direction;
+    border-radius: $border;
+    text-shadow: 2px 2px 5px #111;
+    width: 100%;
+  }
+
+  .echantill-text {
+    font-weight: $font-weight;
+    color: $colorWhite;
+    text-align: $textCenter;
+    width: $width-95;
+    font-size: 25px;
+  }
+
+  .form-key {
+    background-color: $formColor;
+    min-width: 335px;
+    height: 100px;
+
+    @include flexeven();
+
+    border-radius: $border;
+  }
+
+  @include tablet {
+    .form-key {
+      width: 400px;
+      align-items: $alignCenter;
+      border: 1px solid $formColor;
+    }
+
+    .input-wrapper {
+      display: $flex;
+      justify-content: $jcenter;
+      padding-right: 10px;
+    }
+  }
+
+  .bg-img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+
+  @include tablet-x {
+    .bg-img {
+      width: 100%;
+    }
+  }
+
+  @include desktop {
+    .bg-img {
+      background: url(unnamed.jpg);
+      background-repeat: no-repeat;
+      background-size: auto;
+      width: 100%;
+    }
+  }
+
+  .form-input {
+    width: 320px;
+    height: 25px;
+    background-color: $colorWhite;
+    border: 1px solid $formColor;
+    margin-left: 7px;
+    border-radius: $border-3;
+  }
+
+  .change {
+    color: $colorWhite;
+    font-size: 13px;
+    text-align: $textCenter;
+    display: $flex;
+    justify-content: $jcenter;
+    align-items: $alignCenter;
+  }
+
+  .change-a a {
+    text-decoration: none;
+    text-shadow: none;
+  }
+
+  @include tablet {
+    .form-input {
+      width: 280px;
+    }
+  }
+
+  .primarycolor {
+    background-color: $primaryColor;
+    text-align: $textCenter;
+  }
+
+  @include tablet {
+    .primarycolor {
+      width: 70px;
+      border-radius: 0;
+      margin: -1px;
+      background-color: $nativeBlue;
+    }
+  }
+
+  @include desktop {
+    .primarycolor {
+      background-color: $primaryColor;
+    }
+  }
+
+  ::placeholder {
+    color: $colorWhite;
+    opacity: 1;
+  }
+
+  .key-word {
+    margin-left: 7px;
+    font-family: sans-serif, Helvetica;
+    font-size: 13px;
+    text-shadow: none;
+  }
+
+  @include tablet {
+    .key-word {
+      display: $flex;
+      align-items: $alignEnd;
+      justify-content: $flexstart;
+      height: 40px;
+      width: 90%;
+      font-weight: $font-weight;
+    }
+  }
+
+  .how-it-works {
+    background-color: $formColor;
+    width: 100px;
+    text-shadow: none;
+    padding: 5px 3px;
+  }
+
+  .four-steps-container h1 {
+    height: 40px;
+    text-align: $textCenter;
+    margin-top: 40px;
+    color: $primaryColor;
+  }
+
+  .four-steps {
+    height: 450px;
+    font-size: 13px;
+  }
+
+  @include tablet {
+    .four-steps {
+      height: 500px;
+      padding: 20px;
+      font-size: 13px;
+    }
+
+    @include desktop {
+      .four-steps {
+        @include gridColumn;
+      }
+    }
+
+    .four-steps-nested {
+      height: 1000px;
+      min-width: 150px;
+      justify-content: $between;
+    }
+
+    @include desktop {
+      .four-steps-nested {
+        height: 50vh;
+      }
+    }
+
+    .apply-margin {
+      margin-top: 20px;
+      height: 40%;
+      line-height: 18px;
+    }
+
+    @include desktop {
+      .apply-margin {
+        margin-top: 10px;
+        line-height: 18px;
+      }
+    }
+
+    .locate-p {
+      line-height: 18px;
+      margin: 0 20px 0 20px;
+    }
+  }
+
+  .home-text {
+    font-size: 14px;
+  }
+
+  .four-steps-nested {
+    height: 110px;
+    min-width: 150px;
+
+    @include flexCenter();
+
+    flex-direction: $direction;
+    padding: 0 7px 0 5px;
+    color: $colorgray;
+    font-weight: $font-weight-700;
+  }
+
+  .four-steps-nested a {
+    color: $colorblack;
+  }
+
+  .locate-p {
+    color: $colorblack;
+    font-weight: $font-weight;
+  }
+
+  .admitted-students img {
+    width: 40vw;
+    border-radius: $border-radius;
+  }
+
+  @include tablet {
+    .admitted-students img {
+      width: 300px;
+    }
+  }
+
+  .admitted-students-container,
+  .future,
+  .istock {
+    background-color: $colorbrown;
+    color: $colorWhite;
+    height: 380px;
+
+    @include flexeven();
+
+    align-items: $textCenter;
+  }
+
+  @include tablet {
+    .future-nest-reset,
+    .future-nest {
+      @include flexeven();
+
+      align-items: $alignCenter;
+      width: 100%;
+    }
+  }
+
+  @include desktop {
+    .admitted-students-container,
+    .future,
+    .istock {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .future-nest-reset {
+    width: 50%;
+  }
+
+  @include mobile {
+    .future-nest-reset {
+      min-width: 100%;
+      padding-left: 20px;
+    }
+  }
+
+  @include desktop {
+    .problem-std {
+      min-width: 30%;
+
+      @include flexeven();
+
+      height: 20vh;
+      font-size: 20px;
+    }
+  }
+
+  .registered {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: $font-weight;
+  }
+
+  .find-a-course {
+    font-size: 11px;
+    font-weight: 400;
+  }
+
+  .course-with-padding {
+    padding: $padding;
+    background-color: $colorWhite;
+    color: $colorbrown;
+    width: 80px;
+    font-size: 10px;
+    font-weight: $font-weight;
+    margin-top: 3px;
+  }
+
+  .future {
+    background-color: #98a4a5;
+  }
+
+  .future-nest {
+    padding: 5px 5px 5px 20px;
+    width: 100%;
+  }
+
+  @include desktop {
+    .future-nest {
+      padding: 0;
+      width: 50%;
+      height: 20vh;
+      align-items: $flexstart;
+    }
+
+    .future-desktop-nest {
+      justify-content: $jcenter;
+      line-height: 25px;
+      font-size: 20px;
+    }
+  }
+
+  .free-sign-up {
+    color: #98a4a5;
+  }
+
+  .istock {
+    background-color: #519bd7;
+  }
+
+  .platform {
+    font-size: 15px;
+  }
+
+  @include desktop {
+    .platform {
+      font-size: 14px;
+    }
+  }
+}
+
+footer {
+  min-width: 100%;
+
+  @include tablet {
+    padding-left: 0;
+  }
+
+  .footer-middle-container {
+    display: $none;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .footer-top-wrapper {
+    position: relative;
+    height: 80px;
+    background-color: #000;
+    padding: 0 20px;
+    min-width: 100%;
+  }
+
+  @include desktop {
+    .footer-top-wrapper {
+      display: $flex;
+      justify-content: $jcenter;
+      align-items: $alignCenter;
+    }
+  }
+
+  .footer-top {
+    position: relative;
+    font-size: 10px;
+    display: $flex;
+    justify-content: $between;
+    border-top: 0.1px solid rgb(143, 133, 133);
+    border-bottom: 0.1px solid rgb(143, 133, 133);
+    color: $colorWhite;
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  @include mobile {
+    .footer-top {
+      font-size: 8px;
+      width: 1200px;
+    }
+  }
+
+  @include desktop {
+    .footer-top {
+      width: 85vw;
+      font-size: 20px;
+    }
+  }
+
+  @include tablet {
+    .footer-top {
+      font-size: 10px;
+    }
+  }
+
+  .footer-top-icon {
+    color: $colorWhite;
+    position: absolute;
+    left: 48.5%;
+    top: 13px;
+    border: 1px solid rgb(143, 133, 133);
+    border-radius: $border-radius;
+    background-color: $colorblack;
+    padding: 2px 1px 1px 1px;
+    z-index: 5;
+  }
+
+  @include tablet {
+    .footer-top-icon {
+      left: 48.5%;
+    }
+  }
+
+  @include desktop {
+    .footer-top-icon {
+      left: 47%;
+      top: 15px;
+      width: 6vw;
+      height: 6vh;
+      text-align: $textCenter;
+      padding: 25px 8px;
+      display: $flex;
+      align-items: $alignCenter;
+      justify-content: $jcenter;
+    }
+  }
+
+  .footer-top-container {
+    height: 50px;
+    display: $flex;
+    justify-content: $between;
+    align-items: $textCenter;
+  }
+
+  @include desktop {
+    .footer-middle-container {
+      @include flexCenter();
+
+      justify-content: $jcenter;
+      font-size: 11px;
+      color: $colorWhite;
+      background-color: #000;
+    }
+
+    .footer-top-middle,
+    .footer-center-middle {
+      text-align: $textCenter;
+      font-weight: $font-weight;
+      color: $colorWhite;
+      width: 50%;
+      height: 13vh;
+
+      @include flexeven();
+
+      align-items: $alignCenter;
+    }
+
+    .footer-top-middle-nested {
+      text-shadow: 0 0 2px #000;
+    }
+
+    ::placeholder {
+      font-size: 9px;
+      text-align: $textCenter;
+      color: $colorWhite;
+    }
+
+    .eric {
+      background-color: #000;
+      border: 1px solid rgb(80, 72, 72);
+    }
+
+    .footer-top-middle-nested .send {
+      width: 4vw;
+      margin-left: -4.5px;
+      text-align: $textCenter;
+      background-color: #444;
+      font-weight: $font-weight;
+      border: 1px solid rgb(80, 72, 72);
+    }
+
+    .info-eric {
+      color: $primaryColor;
+    }
+
+    .possibility {
+      color: $primaryColor;
+    }
+  }
+
+  .footer-bottom-wrapper {
+    @include flexeven();
+
+    align-items: $textCenter;
+    background-color: $colordkgray;
+    height: 60px;
+  }
+
+  @include desktop {
+    .footer-bottom-wrapper {
+      flex-direction: $row;
+      justify-content: $between;
+    }
+  }
+
+  .footer-bottom-icons {
+    @include flexCenter();
+
+    width: 200px;
+    color: $colorWhite;
+  }
+
+  @include desktop {
+    .footer-bottom-icons {
+      width: 30%;
+    }
+  }
+
+  .power-container {
+    font-size: 11px;
+    color: $colorWhite;
+    font-weight: $font-weight;
+  }
+
+  @include desktop {
+    .power-container {
+      width: 50%;
+      display: $flex;
+      justify-content: flex-end;
+      padding-right: 20px;
+    }
+  }
+}

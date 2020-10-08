@@ -1,0 +1,847 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "acumin-pro", "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flexeven {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+@mixin gridColumn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+$mobile: 150px;
+
+@mixin mobile {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+$tablet: 768px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+$desktop: 1024px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+$desktop-lg: 1131px;
+
+@mixin desktop-lg {
+  @media (min-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+$desktop-xlg: 1250px;
+
+@mixin desktop-xlg {
+  @media (min-width: #{$desktop-xlg}) {
+    @content;
+  }
+}
+
+$primaryColor: #d35649;
+$secondaryColor: #eee;
+$direction: column;
+$between: space-between;
+$colorWhite: #fff;
+$formColor: #c5c2c2;
+$border: 5px;
+$font-weight: 900;
+$textCenter: center;
+$flexstart: flex-start;
+$flex: flex;
+$colorblack: #111;
+$colorgray: #7d8486;
+$font-weight-700: 700;
+$padding: 5px;
+$colordkgray: #1f1f1f;
+$border-radius: 50%;
+$colorbrown: #e17e65;
+$lightbrown: lighten(#e17e65, 10%);
+$alignCenter: center;
+$row: row;
+$jcenter: center;
+$alignEnd: flex-end;
+$nativeBlue: #519bd7;
+$none: none;
+$mainNav: #d2d2d2;
+$darklight: lighten(#111, 60%);
+$topnavgray: #969696;
+$scalapcolor: #4a6786;
+
+header {
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .main-navbar {
+    display: $none;
+  }
+
+  @include desktop {
+    .main-navbar {
+      display: block;
+    }
+
+    .main-top-navbar {
+      background-color: $mainNav;
+      border-top-left-radius: $border;
+      border-top-right-radius: $border;
+    }
+
+    .main-top-icon-container {
+      @include flexCenter ();
+
+      justify-content: $between;
+      padding: $padding;
+    }
+
+    .top-left-icon .one {
+      color: #e76d6b;
+    }
+
+    .top-left-icon .two {
+      color: #dfbc43;
+    }
+
+    .top-left-icon .three {
+      color: #3dba78;
+    }
+
+    .top-right-icon {
+      color: $topnavgray;
+    }
+
+    .main-middle-icon-container {
+      display: $flex;
+      justify-content: $between;
+      padding: $padding;
+      min-width: 100%;
+    }
+
+    .main-middle-icon-left-wrapper {
+      @include flexCenter();
+
+      min-width: 63%;
+    }
+
+    .middle-left {
+      width: 8%;
+      text-align: $textCenter;
+      background-color: #e6e6e6;
+
+      @include flexCenter();
+
+      border-radius: 2px;
+      padding: 4px 3px;
+    }
+
+    .bk-arrow {
+      color: $darklight;
+    }
+
+    .frt-arrow {
+      color: $topnavgray;
+    }
+
+    .middle-center .plus {
+      width: 4vw;
+      text-align: $textCenter;
+      background-color: $colorWhite;
+      font-size: 11px;
+      padding: 6px;
+      margin-right: -4.5px;
+      color: $topnavgray;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+
+    .middle-center .input-nav {
+      width: 45vw;
+      padding: 3px;
+      border: 0.01px solid $colorWhite;
+    }
+
+    .middle-center .curve-arrow {
+      font-size: 13px;
+      padding: 5px;
+      background-color: $colorWhite;
+      width: 4vw;
+      text-align: $textCenter;
+      margin-left: -5px;
+      color: $topnavgray;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+
+    .main-middle-icon-right-wrapper {
+      @include flexCenter();
+
+      justify-content: $between;
+      width: 36%;
+      margin-right: 5px;
+    }
+
+    .middle-center-2 .fab {
+      text-align: $textCenter;
+      padding: 2px 2px 5px 2px;
+      background-color: $colorWhite;
+      width: 3vw;
+      color: $topnavgray;
+      margin: -3px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    .middle-center-2 .input-nav-2 {
+      width: 29vw;
+      padding: 3px;
+      margin: -2px;
+      border: 0.01px solid $colorWhite;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .middle-right .fas {
+      color: $darklight;
+      padding: 4px;
+      text-align: $textCenter;
+      width: 3vw;
+      border-radius: $border;
+      background-color: #e6e6e6;
+    }
+
+    .main-bottom-navbar {
+      background-color: $primaryColor;
+      height: 8vh;
+      width: 100%;
+
+      @include flexCenter();
+    }
+
+    .main-bottom-navbar a {
+      text-decoration: none;
+    }
+
+    .echantill {
+      width: 10vw;
+    }
+
+    .echantill-icons {
+      width: 40vw;
+      font-size: 12px;
+      font-weight: $font-weight;
+    }
+  }
+
+  .topnav {
+    @include flexCenter();
+
+    max-width: 100%;
+    height: 80px;
+    background-color: $primaryColor;
+    flex-direction: $direction;
+  }
+
+  @include tablet {
+    .topnav {
+      flex-direction: row;
+    }
+  }
+
+  @include desktop {
+    .topnav {
+      display: $none;
+    }
+  }
+
+  .echantill {
+    @include flexCenter();
+
+    min-width: 130px;
+    color: $colorWhite;
+    font-weight: 700;
+  }
+
+  .echantill a {
+    color: $colorWhite;
+  }
+
+  @include tablet {
+    .echantill {
+      min-width: 200px;
+      justify-content: $flexstart;
+    }
+
+    .echantill .fas {
+      padding-right: 4px;
+    }
+  }
+
+  .echantill-icons {
+    @include flexCenter();
+
+    min-width: 200px;
+  }
+
+  .echantill-icons a {
+    color: $colorWhite;
+  }
+}
+
+main {
+  margin-top: 65px;
+  padding: 20px;
+
+  .scala-table-large {
+    display: $none;
+  }
+
+  .scala-text-lg {
+    display: $none;
+  }
+
+  @include desktop {
+    margin-top: 40px;
+  }
+
+  .scala-container {
+    @include flexeven();
+
+    height: 14vh;
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+
+  @include tablet {
+    .scala-container {
+      padding-top: 15px;
+    }
+  }
+
+  .scala img {
+    width: 30px;
+  }
+
+  .scala {
+    @include flexCenter();
+
+    justify-content: $flexstart;
+  }
+
+  .scala p {
+    font-size: 30px;
+    color: #e28d82;
+  }
+
+  .language {
+    color: $topnavgray;
+    font-weight: $font-weight;
+  }
+
+  .scala-wrapper-grand {
+    display: $flex;
+    justify-content: $jcenter;
+  }
+
+  @include desktop {
+    .scala-wrapper-grand {
+      margin-top: 20px;
+    }
+  }
+
+  .scala-wrapper {
+    border: 3px solid #c4bebe;
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: space-around;
+    height: 550px;
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-top: 100px;
+  }
+
+  .scala-table,
+  th {
+    border: 1px solid #c4bebe;
+    color: rgb(90, 85, 85);
+    font-size: 12px;
+  }
+
+  @include desktop {
+    .scala-table {
+      display: none;
+    }
+
+    .scala-table-large {
+      display: block;
+      font-size: 15px;
+    }
+
+    .scala-wrapper {
+      display: $flex;
+      flex-direction: $direction;
+      justify-content: space-around;
+      height: 450px;
+      width: 50%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      padding-top: 30px;
+      align-items: $alignCenter;
+    }
+
+    .scala-container {
+      align-items: $flexstart;
+      width: 36vw;
+      padding-top: 35px;
+    }
+
+    @include desktop {
+      .scala-container {
+        margin-top: 25px;
+      }
+    }
+
+    .scala-text-lg {
+      display: block;
+      color: $topnavgray;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: $font-weight-700;
+    }
+  }
+
+  @include desktop-lg {
+    .scala-wrapper {
+      width: 50vw;
+    }
+
+    .scala-container {
+      width: 24vw;
+    }
+  }
+
+  .scala-apply {
+    display: $flex;
+    justify-content: flex-end;
+    width: 65vw;
+  }
+
+  @include desktop {
+    .scala-apply {
+      width: 36vw;
+    }
+  }
+
+  @include desktop-lg {
+    .scala-apply {
+      width: 65%;
+    }
+  }
+
+  @include desktop-xlg {
+    .scala-apply {
+      max-width: 24vw;
+    }
+  }
+
+  .scala-apply .fas,
+  .scala-apply button {
+    padding: 2px;
+    color: $colorWhite;
+    background-color: $nativeBlue;
+    border: 1px solid $nativeBlue;
+    cursor: pointer;
+  }
+
+  .scala-apply button {
+    padding: 1px;
+  }
+
+  .scala-text {
+    color: $topnavgray;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: $font-weight-700;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .click-details {
+    display: $flex;
+    justify-content: $jcenter;
+    align-items: $alignCenter;
+    text-align: $textCenter;
+    height: 7vh;
+    background-color: #f5f5f5;
+  }
+
+  .click-details .fas {
+    margin-right: 5px;
+    padding-bottom: 3px;
+    text-align: $textCenter;
+  }
+
+  .click-details p {
+    font-size: 18px;
+  }
+
+  .scala-text-container {
+    min-height: 40vh;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .register-form {
+    font-size: 13px;
+    height: 40vh;
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: space-evenly;
+    width: 40%;
+    align-items: $alignCenter;
+    margin: 40px 0;
+  }
+
+  .register-form-container {
+    display: $flex;
+    justify-content: $jcenter;
+    width: 100%;
+  }
+
+  .register-margin {
+    margin-bottom: 10px;
+  }
+
+  .fill-in-credentials {
+    height: 5vh;
+    width: 40vw;
+    padding: 5px;
+    background-color: #dfe2e3;
+    border: 1px solid #dfe2e3;
+  }
+
+  .sign-up {
+    display: $flex;
+    align-items: $alignCenter;
+    justify-content: $jcenter;
+    width: 100px;
+  }
+
+  .sign-up button {
+    width: 20vw;
+    font-size: 11px;
+    background-color: $primaryColor;
+    color: $colorWhite;
+    padding: 2px 0;
+    margin-right: 4px;
+    border: 1px solid $primaryColor;
+    cursor: pointer;
+    text-align: $textCenter;
+  }
+
+  .sign-up p {
+    font-size: 10px;
+    color: #60b331;
+    cursor: pointer;
+    width: 10vw;
+  }
+
+  .google-img {
+    width: 700px;
+    height: 400px;
+  }
+
+  .map-directions-container {
+    display: $flex;
+    flex-direction: $direction;
+    align-items: $alignCenter;
+    margin-bottom: 20px;
+  }
+
+  .map-directons {
+    display: $flex;
+    align-items: $alignCenter;
+    justify-content: $jcenter;
+    height: 10vh;
+  }
+
+  .map-directons .fas,
+  .map-directons p {
+    color: $primaryColor;
+  }
+
+  .map-directons p {
+    font-weight: $font-weight;
+    padding-left: 1px;
+  }
+
+  @include tablet {
+    .map-directions-container {
+      display: $flex;
+      flex-direction: $direction;
+      align-items: $alignCenter;
+      margin-bottom: 20px;
+    }
+
+    .map-directons {
+      display: $flex;
+      align-items: $alignCenter;
+      justify-content: $jcenter;
+      height: 10vh;
+    }
+
+    .map-directons .fas,
+    .map-directons p {
+      color: $primaryColor;
+    }
+
+    .map-directons p {
+      font-weight: $font-weight;
+      padding-left: 1px;
+    }
+
+    .google-img {
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
+footer {
+  min-width: 100%;
+
+  .footer-middle-container {
+    display: $none;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .footer-top-wrapper {
+    position: relative;
+    height: 80px;
+    background-color: #000;
+    padding: 0 20px;
+    min-width: 100%;
+  }
+
+  @include desktop {
+    .footer-top-wrapper {
+      display: $flex;
+      justify-content: $jcenter;
+      align-items: $alignCenter;
+    }
+  }
+
+  .footer-top {
+    position: relative;
+    font-size: 7px;
+    display: $flex;
+    justify-content: $between;
+    border-top: 0.1px solid rgb(143, 133, 133);
+    border-bottom: 0.1px solid rgb(143, 133, 133);
+    color: $colorWhite;
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  @include desktop {
+    .footer-top {
+      width: 85vw;
+      font-size: 20px;
+    }
+  }
+
+  @include tablet {
+    .footer-top {
+      font-size: 10px;
+    }
+  }
+
+  .footer-top-icon {
+    color: $colorWhite;
+    position: absolute;
+    left: 48.5%;
+    top: 13px;
+    border: 1px solid rgb(143, 133, 133);
+    border-radius: $border-radius;
+    background-color: $colorblack;
+    padding: 2px 1px 1px 1px;
+    z-index: 5;
+  }
+
+  @include tablet {
+    .footer-top-icon {
+      left: 47.2%;
+      top: 2px;
+      width: 6vw;
+      height: 6vh;
+      text-align: $textCenter;
+      display: $flex;
+      align-items: $alignCenter;
+      justify-content: $jcenter;
+      padding: 20px 8px;
+    }
+  }
+
+  @include desktop {
+    .footer-top-icon {
+      left: 47%;
+      top: 15px;
+      padding: 25px 8px;
+    }
+  }
+
+  .footer-top-container {
+    height: 50px;
+    display: $flex;
+    justify-content: $between;
+    align-items: $textCenter;
+  }
+
+  @include desktop {
+    .footer-middle-container {
+      @include gridColumn();
+
+      grid-template-columns: repeat(3, 1fr);
+      background-color: #000;
+      width: 100%;
+      font-size: 11px;
+    }
+
+    .footer-top-middle,
+    .footer-center-middle {
+      text-align: $textCenter;
+      font-weight: $font-weight;
+      color: $colorWhite;
+      width: 100%;
+
+      @include flexeven();
+
+      align-items: $alignCenter;
+      height: 18vh;
+    }
+
+    .middle-adjust {
+      width: 100%;
+    }
+
+    .middle-adjust-font {
+      font-size: 11px;
+    }
+
+    .footer-top-middle-nested {
+      text-shadow: 0 0 2px #000;
+    }
+
+    ::placeholder {
+      font-size: 9px;
+      text-align: $textCenter;
+      color: $colorWhite;
+    }
+
+    .eric {
+      background-color: #000;
+      border: 1px solid rgb(80, 72, 72);
+    }
+
+    .footer-top-middle-nested .send {
+      width: 4vw;
+      margin-left: -4.5px;
+      text-align: $textCenter;
+      background-color: #444;
+      font-weight: $font-weight;
+      border: 1px solid rgb(80, 72, 72);
+    }
+
+    .info-eric {
+      color: $primaryColor;
+    }
+
+    .possibility {
+      color: $primaryColor;
+    }
+  }
+
+  .footer-bottom-wrapper {
+    @include flexeven();
+
+    align-items: $textCenter;
+    background-color: $colordkgray;
+    height: 60px;
+  }
+
+  @include desktop {
+    .footer-bottom-wrapper {
+      flex-direction: $row;
+      justify-content: $between;
+    }
+  }
+
+  .footer-bottom-icons {
+    @include flexCenter();
+
+    width: 200px;
+    color: $colorWhite;
+  }
+
+  @include desktop {
+    .footer-bottom-icons {
+      width: 30%;
+    }
+  }
+
+  .power-container {
+    font-size: 11px;
+    color: $colorWhite;
+    font-weight: $font-weight;
+  }
+
+  @include desktop {
+    .power-container {
+      width: 50%;
+      display: $flex;
+      justify-content: flex-end;
+      padding-right: 20px;
+    }
+  }
+}

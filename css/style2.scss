@@ -46,7 +46,7 @@ $mobile-xx: 460px;
   }
 }
 
-$tablet: 769px;
+$tablet: 768px;
 
 @mixin tablet {
   @media (min-width: #{$tablet}) {
@@ -387,11 +387,11 @@ main {
     }
 
     .clear-filter .far {
-      padding: 2.5px 1px 7px 1px;
+      padding: 2.5px 1px 7px 2px;
     }
 
     .re-fill {
-      width: 80px;
+      width: 85px;
       margin-left: -6px;
       padding: 1px;
     }
@@ -399,6 +399,20 @@ main {
     ::placeholder {
       color: $colorWhite;
       text-align: $textCenter;
+    }
+  }
+
+  @include desktop-xlg {
+    .clear-filter {
+      text-align: center;
+    }
+
+    .clear-filter .far {
+      padding-top: 3.5px;
+    }
+
+    .re-fill {
+      padding-bottom: 2px;
     }
   }
 

@@ -490,10 +490,10 @@ main .how-it-works {
   padding: 5px 3px;
 }
 
-main .four-steps-container h5 {
+main .four-steps-container h1 {
   height: 40px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
   color: #d35649;
 }
 
@@ -667,7 +667,7 @@ main .future-nest-reset {
   width: 50%;
 }
 
-@media (min-width: 300px) {
+@media (min-width: 375px) {
   main .future-nest-reset {
     min-width: 100%;
     padding-left: 20px;
@@ -815,6 +815,13 @@ footer .footer-top {
   color: #fff;
   width: 100%;
   padding: 5px 0;
+}
+
+@media (min-width: 375px) {
+  footer .footer-top {
+    font-size: 8px;
+    width: 1200px;
+  }
 }
 
 @media (min-width: 1024px) {

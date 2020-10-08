@@ -30,7 +30,7 @@ body {
   gap: 20px;
 }
 
-$mobile: 300px;
+$mobile: 375px;
 
 @mixin mobile {
   @media (min-width: #{$mobile}) {
@@ -478,10 +478,10 @@ main {
     padding: 5px 3px;
   }
 
-  .four-steps-container h5 {
+  .four-steps-container h1 {
     height: 40px;
     text-align: $textCenter;
-    margin-top: 20px;
+    margin-top: 40px;
     color: $primaryColor;
   }
 
@@ -728,6 +728,13 @@ footer {
     color: $colorWhite;
     width: 100%;
     padding: 5px 0;
+  }
+
+  @include mobile {
+    .footer-top {
+      font-size: 8px;
+      width: 1200px;
+    }
   }
 
   @include desktop {

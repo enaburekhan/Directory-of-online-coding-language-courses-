@@ -215,7 +215,7 @@ header .topnav {
           flex-direction: column;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   header .topnav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -254,7 +254,7 @@ header .echantill a {
   color: #fff;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   header .echantill {
     min-width: 200px;
     -webkit-box-pack: start;
@@ -287,7 +287,7 @@ main {
   padding-right: 50px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   main main {
     padding-right: 0;
   }
@@ -334,10 +334,10 @@ main .filter-container {
     border: 1px solid #e5ab5b;
   }
   main .clear-filter .far {
-    padding: 2.5px 1px 7px 1px;
+    padding: 2.5px 1px 7px 2px;
   }
   main .re-fill {
-    width: 80px;
+    width: 85px;
     margin-left: -6px;
     padding: 1px;
   }
@@ -359,6 +359,18 @@ main .filter-container {
   }
 }
 
+@media (min-width: 1253px) {
+  main .clear-filter {
+    text-align: center;
+  }
+  main .clear-filter .far {
+    padding-top: 3.5px;
+  }
+  main .re-fill {
+    padding-bottom: 2px;
+  }
+}
+
 main .search-container {
   height: 80vh;
   padding-top: 79px;
@@ -376,7 +388,7 @@ main .courses {
   background-color: #eee;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   main .courses {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -527,7 +539,7 @@ footer .footer-top {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   footer .footer-top {
     font-size: 9px;
   }
@@ -559,7 +571,7 @@ footer .footer-top-icon {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   footer .footer-top-icon {
     left: 47.2%;
     top: 4px;
@@ -709,7 +721,7 @@ footer .footer-bottom-wrapper {
   width: 100%;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   footer .footer-bottom-wrapper {
     z-index: 13;
     height: 75px;
@@ -744,7 +756,7 @@ footer .footer-bottom-icons {
   background-color: #1f1f1f;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   footer .footer-bottom-icons {
     width: 40%;
   }
